@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Weather Informer</string>
+    <string name="cities">Cities</string>
+    <string name="main">Main</string>
+    <string name="settings">Settings</string>
+</resources>

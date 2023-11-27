@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Погода"
-        android:icon="@drawable/baseline_home_24"
-        android:id="@+id/home"/>
-    <item android:title="Карта"
-        android:icon="@drawable/baseline_place_24"
-        android:id="@+id/place"/>
-    <item android:title="Настройки"
-        android:icon="@drawable/baseline_settings_24"
+    <item android:title="@string/cities"
+        android:icon="@drawable/cities_icon"
+        android:id="@+id/cities"/>
+    <item android:title="@string/main"
+        android:icon="@drawable/main_icon"
+        android:id="@+id/main"/>
+    <item android:title="@string/settings"
+        android:icon="@drawable/settings_icon"
         android:id="@+id/settings"/>
 </menu>
