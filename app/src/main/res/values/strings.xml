@@ -3,4 +3,6 @@
     <string name="cities">Города</string>
     <string name="main">Главная</string>
     <string name="settings">Настройки</string>
+    <string name="temperature_label">Measure temperature in degrees:</string>
+    <string name="language_label">Language:</string>
 </resources>

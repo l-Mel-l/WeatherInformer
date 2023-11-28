@@ -4,4 +4,6 @@
     <string name="cities">Cities</string>
     <string name="main">Main</string>
     <string name="settings">Settings</string>
+    <string name="temperature_label"></string>
+    <string name="language_label"></string>
 </resources>

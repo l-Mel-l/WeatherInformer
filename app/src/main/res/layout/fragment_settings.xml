@@ -27,17 +27,109 @@
         android:textSize="16sp"
         android:textStyle="bold"
         android:translationX="30dp"
-        android:translationY="100dp" />
+        android:translationY="150dp" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="Тема:"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:textStyle="bold"
         android:translationX="30dp"
-        android:translationY="160dp" />
+        android:translationY="250dp" />
+    <RadioGroup
+        android:id="@+id/TempRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:translationX="30dp"
+        android:translationY="90dp">
+        <RadioButton
+            android:id="@+id/CeladioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@android:drawable/radiobutton_off_background"
+            android:text="Фаренгейта"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <RadioButton
+            android:id="@+id/FarradioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@android:drawable/radiobutton_off_background"
+            android:text="Цельсия"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RadioGroup>
+    <RadioGroup
+        android:id="@+id/languageRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:translationX="30dp"
+        android:translationY="180dp">
+
+        <RadioButton
+            android:id="@+id/englishRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@android:drawable/radiobutton_off_background"
+            android:text="English"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/russianRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@android:drawable/radiobutton_off_background"
+            android:text="Русский"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RadioGroup>
+    <RadioGroup
+        android:id="@+id/ThemeRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:translationX="30dp"
+        android:translationY="280dp">
+        <RadioButton
+            android:id="@+id/LightThemeRadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@android:drawable/radiobutton_off_background"
+            android:text="Light"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/DarkthemeRadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@android:drawable/radiobutton_off_background"
+            android:text="Dark"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <RadioButton
+            android:id="@+id/NewYearthemeRadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@android:drawable/radiobutton_off_background"
+            android:text="NewYear"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RadioGroup>
 
 </FrameLayout>
