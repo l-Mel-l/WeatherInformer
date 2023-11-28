@@ -29,7 +29,7 @@
             app:layout_constraintVertical_bias="0.7" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/CityText"
             android:layout_width="114dp"
             android:layout_height="54dp"
             android:layout_marginTop="60dp"
@@ -38,7 +38,7 @@
             android:fontFamily="serif"
             android:text="Пенза"
             android:textSize="34sp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintBottom_toBottomOf="@+id/TemperatureText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.925"
             app:layout_constraintStart_toEndOf="@+id/imageView4"
@@ -46,31 +46,31 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/TemperatureText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
             android:layout_marginEnd="154dp"
             android:fontFamily="serif"
-            android:text="18"
+            android:text="-"
             android:textSize="34sp"
-            app:layout_constraintBottom_toTopOf="@+id/textView5"
+            app:layout_constraintBottom_toTopOf="@+id/FeelsLikeText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView4"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toBottomOf="@+id/CityText" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/WeatherText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="25dp"
             android:text="Небольшой дождь"
             android:textSize="14sp"
-            app:layout_constraintEnd_toStartOf="@+id/textView5"
+            app:layout_constraintEnd_toStartOf="@+id/FeelsLikeText"
             app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/FeelsLikeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="553dp"
@@ -79,7 +79,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.757"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintTop_toBottomOf="@+id/TemperatureText" />
 
         <ImageView
             android:id="@+id/imageView4"
@@ -88,7 +88,7 @@
             android:layout_marginEnd="147dp"
             android:src="@drawable/main_icon"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/textView5"
+            app:layout_constraintEnd_toEndOf="@+id/FeelsLikeText"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
