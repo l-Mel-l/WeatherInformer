@@ -1,4 +1,4 @@
-package com.example.weatherinformer;
+package ru.malw.weatherinformer;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.fragment.app.Fragment;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.io.IOException;

@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.weatherinformer'
+    namespace 'ru.malw.weatherinformer'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.weatherinformer"
+        applicationId "ru.malw.weatherinformer"
         minSdk 24
         targetSdk 33
         versionCode 1

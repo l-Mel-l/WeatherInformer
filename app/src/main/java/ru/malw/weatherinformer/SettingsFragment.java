@@ -1,4 +1,4 @@
-package com.example.weatherinformer;
+package ru.malw.weatherinformer;
 
 import android.content.res.Configuration;
 import android.os.Bundle;

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    tools:context="ru.malw.weatherinformer.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -54,7 +54,6 @@
             android:layout_marginEnd="144dp"
             android:text="Небольшой дождь"
             android:textSize="14sp"
-            app:layout_constraintBottom_toTopOf="@+id/_dynamic"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"

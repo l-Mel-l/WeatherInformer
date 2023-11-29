@@ -1,4 +1,4 @@
-package com.example.weatherinformer;
+package ru.malw.weatherinformer;
 
 import org.junit.Test;
 

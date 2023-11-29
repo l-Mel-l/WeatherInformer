@@ -1,4 +1,4 @@
-package com.example.weatherinformer;
+package ru.malw.weatherinformer;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -6,7 +6,8 @@ import androidx.fragment.app.Fragment;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 
-import com.example.weatherinformer.databinding.ActivityMainBinding;
+import ru.malw.weatherinformer.databinding.ActivityMainBinding;
+
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;

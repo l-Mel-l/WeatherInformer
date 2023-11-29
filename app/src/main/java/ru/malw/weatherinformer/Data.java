@@ -1,4 +1,4 @@
-package com.example.weatherinformer;
+package ru.malw.weatherinformer;
 
 public class Data {
     public static String token = "2a605935cb485e63d8657f2f7c2774e9";
