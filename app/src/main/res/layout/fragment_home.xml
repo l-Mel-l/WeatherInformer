@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_200"
     tools:context=".HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -15,84 +14,64 @@
         android:foregroundGravity="clip_horizontal"
         android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="438dp"
-            android:layout_height="320dp"
-            android:layout_marginBottom="441dp"
-            android:src="@android:drawable/editbox_background_normal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.518"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.7" />
-
         <TextView
             android:id="@+id/CityText"
-            android:layout_width="114dp"
-            android:layout_height="54dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="76dp"
-            android:layout_marginBottom="45dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="154dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="154dp"
+            android:layout_marginBottom="20dp"
             android:fontFamily="serif"
             android:text="Пенза"
             android:textSize="34sp"
-            app:layout_constraintBottom_toBottomOf="@+id/TemperatureText"
+            app:layout_constraintBottom_toTopOf="@+id/TemperatureText"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.925"
-            app:layout_constraintStart_toEndOf="@+id/imageView4"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/TemperatureText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="154dp"
+            android:layout_marginStart="195dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="195dp"
+            android:layout_marginBottom="21dp"
             android:fontFamily="serif"
             android:text="-"
-            android:textSize="34sp"
+            android:textSize="70sp"
             app:layout_constraintBottom_toTopOf="@+id/FeelsLikeText"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/CityText" />
 
         <TextView
             android:id="@+id/WeatherText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="25dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginEnd="144dp"
             android:text="Небольшой дождь"
             android:textSize="14sp"
-            app:layout_constraintEnd_toStartOf="@+id/FeelsLikeText"
-            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+            app:layout_constraintBottom_toTopOf="@+id/_dynamic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/FeelsLikeText"
+            app:layout_constraintVertical_bias="0.263" />
 
         <TextView
             android:id="@+id/FeelsLikeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="553dp"
+            android:layout_marginStart="144dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="145dp"
             android:text="Ощущается как 10"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.757"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/TemperatureText" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="136dp"
-            android:layout_height="106dp"
-            android:layout_marginEnd="147dp"
-            android:src="@drawable/main_icon"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/FeelsLikeText"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.096" />
 
         <ListView
             android:layout_width="415dp"
@@ -102,8 +81,7 @@
             android:cacheColorHint="#B62929"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
