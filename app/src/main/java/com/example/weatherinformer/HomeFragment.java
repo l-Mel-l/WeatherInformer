@@ -1,77 +1,61 @@
 package com.example.weatherinformer;
 
-import android.os.AsyncTask;
-import android.os.Build;
+import android.app.AlertDialog;
+import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.textclassifier.ConversationActions;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
-
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.Scanner;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.Executors;
 
 public class HomeFragment extends Fragment {
-    private static final String API_KEY = "2a605935cb485e63d8657f2f7c2774e9";
-    private static final String CITY_NAME = "CITY_NAME";
-    private static final String API_URL = "https://api.openweathermap.org/data/2.5/forecast?id=" + 511565 + "&appid=" + Weather.Data.token + "&lang=" + "ru" + "&units=" + (Weather.Data.UseFahrenheit ? "imperial" : "metric");
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
+    private View root;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
-        new GetWeather().execute();
-        return view;
+        root = inflater.inflate(R.layout.fragment_home, container, false);
+        refresh(getContext());
+        return root;
     }
 
-    private class GetWeather extends AsyncTask<Void, Void, Void> {
+    private void refresh(Context context) {
+        CompletableFuture.runAsync(() -> {
+            try {
+                HttpURLConnection connection = (HttpURLConnection) new URL("https://api.openweathermap.org/data/2.5/forecast?id=" + Data.CityID + "&appid=" + Data.token + "&lang=" + Data.language + "&units=" + (Data.UseFahrenheit ? "imperial" : "metric")).openConnection();
+                connection.setRequestMethod("GET");
+                connection.getResponseCode();
+                JSONObject weather = new JSONObject(new Scanner(connection.getInputStream(), "UTF-8").useDelimiter("\\A").next());
 
-        @Override
-        protected Void doInBackground(Void... voids) {
-            HttpHandler httpHandler = new HttpHandler();
-            String jsonStr = httpHandler.makeServiceCall(API_URL);
-
-            if (jsonStr != null) {
-                try {
-                    JSONObject jsonObj = new JSONObject(jsonStr);
-
-                    // Получение объекта для информации о погоде
-
-
-                    // Здесь можно использовать данные о погоде по своему усмотрению
-                    TextView temperatureTextView = getActivity().findViewById(R.id.TemperatureText);
-                    TextView descriptionTextView = getActivity().findViewById(R.id.WeatherText);
-                    TextView feelsLikeTextView = getActivity().findViewById(R.id.FeelsLikeText);
-                    getActivity().runOnUiThread(() -> {
-                        try {
-                            temperatureTextView.setText(jsonObj.getJSONArray("list").getJSONObject(0).getJSONObject("main").getString("temp"));
-                            descriptionTextView.setText(jsonObj.getJSONArray("list").getJSONObject(0).getJSONArray("weather").getJSONObject(0).getString("description"));
-                            feelsLikeTextView.setText("Ощущается как " +jsonObj.getJSONArray("list").getJSONObject(0).getJSONObject("main").getString("feels_like"));
-                        } catch (JSONException e) {
-                            throw new RuntimeException(e);
-                        }
-                    });
-
-                } catch (final JSONException e) {
-                    e.printStackTrace();
-                }
+                getActivity().runOnUiThread(() -> {
+                    try {
+                        ((TextView) root.findViewById(R.id.TemperatureText)).setText(weather.getJSONArray("list").getJSONObject(0).getJSONObject("main").getString("temp"));
+                        ((TextView) root.findViewById(R.id.WeatherText)).setText(weather.getJSONArray("list").getJSONObject(0).getJSONArray("weather").getJSONObject(0).getString("description"));
+                        ((TextView) root.findViewById(R.id.FeelsLikeText)).setText("Ощущается как " + weather.getJSONArray("list").getJSONObject(0).getJSONObject("main").getString("feels_like"));
+                    } catch (JSONException e) {
+                        throw new RuntimeException(e);
+                    }
+                });
+            } catch (IOException | JSONException e) {
+                new Handler(Looper.getMainLooper()).post(() ->
+                        // TODO: надо будет потом сделать диалоговое окно об ошибке таким же, как в десктопе. Но щас лень.
+                        new AlertDialog.Builder(context)
+                            .setTitle("Не удалось получить данные с сервера!")
+                            .setMessage("Контакты не были синхронизированы с сервером!")
+                            .setPositiveButton("OK", (dialog, which) -> dialog.dismiss())
+                            .show()
+                );
             }
-
-            return null;
-        }
+        }, Executors.newSingleThreadExecutor()).thenRun(() -> Executors.newSingleThreadExecutor().shutdown());
     }
 }

@@ -9,10 +9,7 @@ import android.os.Bundle;
 import com.example.weatherinformer.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
-    public static Weather weather;
-
     ActivityMainBinding binding;
-
     @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
             }
             return true;
         });
-        weather = new Weather();
     }
     private void replaceFragment(Fragment fragment){
         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPlace, fragment).commit();
