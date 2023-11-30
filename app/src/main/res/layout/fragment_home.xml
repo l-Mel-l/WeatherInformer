@@ -7,81 +7,327 @@
     tools:context="ru.malw.weatherinformer.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#00808080"
-        android:foregroundGravity="clip_horizontal"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/CityText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="154dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="154dp"
-            android:layout_marginBottom="20dp"
-            android:fontFamily="serif"
-            android:text="Пенза"
-            android:textSize="34sp"
-            app:layout_constraintBottom_toTopOf="@+id/TemperatureText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00808080"
+            android:foregroundGravity="clip_horizontal"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/TemperatureText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="195dp"
-            android:layout_marginTop="21dp"
-            android:layout_marginEnd="195dp"
-            android:layout_marginBottom="21dp"
-            android:fontFamily="serif"
-            android:text="-"
-            android:textSize="70sp"
-            app:layout_constraintBottom_toTopOf="@+id/FeelsLikeText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/CityText" />
+            <TextView
+                android:id="@+id/CityText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="154dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="154dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="serif"
+                android:text="Пенза"
+                android:textSize="34sp"
+                app:layout_constraintBottom_toTopOf="@+id/TemperatureText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/WeatherText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="140dp"
-            android:layout_marginEnd="144dp"
-            android:text="Небольшой дождь"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/FeelsLikeText"
-            app:layout_constraintVertical_bias="0.263" />
+            <TextView
+                android:id="@+id/TemperatureText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="195dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="195dp"
+                android:layout_marginBottom="21dp"
+                android:fontFamily="serif"
+                android:text="-"
+                android:textSize="70sp"
+                app:layout_constraintBottom_toTopOf="@+id/FeelsLikeText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CityText" />
 
-        <TextView
-            android:id="@+id/FeelsLikeText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="144dp"
-            android:layout_marginTop="21dp"
-            android:layout_marginEnd="145dp"
-            android:text="Ощущается как 10"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/TemperatureText" />
+            <TextView
+                android:id="@+id/WeatherText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="140dp"
+                android:layout_marginEnd="144dp"
+                android:text="Небольшой дождь"
+                android:gravity="center"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/FeelsLikeText"
+                app:layout_constraintVertical_bias="0.263" />
 
-        <ListView
-            android:layout_width="415dp"
-            android:layout_height="440dp"
-            android:layout_marginStart="1dp"
-            android:layout_marginBottom="1dp"
-            android:cacheColorHint="#B62929"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/FeelsLikeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="144dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="145dp"
+                android:text="Ощущается как 10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TemperatureText" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/DataText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="350dp"
+                android:text="Завтра"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="380dp"
+                android:text="0:00"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="380dp"
+                android:text="3:00"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="380dp"
+                android:text="6:00"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="380dp"
+                android:text="9:00"
+                app:layout_constraintStart_toEndOf="@+id/textView3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="380dp"
+                android:text="12:00"
+                app:layout_constraintStart_toEndOf="@+id/textView5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="380dp"
+                android:text="15:00"
+                app:layout_constraintStart_toEndOf="@+id/textView6"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="380dp"
+                android:text="18:00"
+                app:layout_constraintStart_toEndOf="@+id/textView7"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="380dp"
+                android:text="21:00"
+                app:layout_constraintStart_toEndOf="@+id/textView8"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/i1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:src="@drawable/main_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView" />
+
+            <ImageView
+                android:id="@+id/i2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:src="@drawable/main_icon"
+                app:layout_constraintStart_toEndOf="@+id/i1"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <ImageView
+                android:id="@+id/i3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:src="@drawable/main_icon"
+                app:layout_constraintStart_toEndOf="@+id/i2"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <ImageView
+                android:id="@+id/i4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:src="@drawable/main_icon"
+                app:layout_constraintStart_toEndOf="@+id/i3"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <ImageView
+                android:id="@+id/i5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:src="@drawable/main_icon"
+                app:layout_constraintStart_toEndOf="@+id/i4"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <ImageView
+                android:id="@+id/i6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:src="@drawable/main_icon"
+                app:layout_constraintStart_toEndOf="@+id/i5"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <ImageView
+                android:id="@+id/i7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="29dp"
+                android:src="@drawable/main_icon"
+                app:layout_constraintStart_toEndOf="@+id/i6"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <ImageView
+                android:id="@+id/i8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:src="@drawable/main_icon"
+                app:layout_constraintStart_toEndOf="@+id/i7"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/t1"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="18dp"
+                android:gravity="center"
+                android:text="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/i1" />
+
+            <TextView
+                android:id="@+id/t2"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="22dp"
+                android:gravity="center"
+                android:text="0"
+                app:layout_constraintStart_toEndOf="@+id/t1"
+                app:layout_constraintTop_toBottomOf="@+id/i2" />
+
+            <TextView
+                android:id="@+id/t3"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="19dp"
+                android:gravity="center"
+                android:text="0"
+                app:layout_constraintStart_toEndOf="@+id/t2"
+                app:layout_constraintTop_toBottomOf="@+id/i3" />
+
+            <TextView
+                android:id="@+id/t4"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="0"
+                app:layout_constraintStart_toEndOf="@+id/t3"
+                app:layout_constraintTop_toBottomOf="@+id/i4" />
+
+            <TextView
+                android:id="@+id/t5"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="0"
+                app:layout_constraintStart_toEndOf="@+id/t4"
+                app:layout_constraintTop_toBottomOf="@+id/i5" />
+
+            <TextView
+                android:id="@+id/t6"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="31dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="0"
+                app:layout_constraintStart_toEndOf="@+id/t5"
+                app:layout_constraintTop_toBottomOf="@+id/i6" />
+            <TextView
+                android:id="@+id/t7"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="29dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="0"
+                app:layout_constraintStart_toEndOf="@+id/t6"
+                app:layout_constraintTop_toBottomOf="@+id/i7" />
+            <TextView
+                android:id="@+id/t8"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="29dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="0"
+                app:layout_constraintStart_toEndOf="@+id/t7"
+                app:layout_constraintTop_toBottomOf="@+id/i8" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </FrameLayout>
