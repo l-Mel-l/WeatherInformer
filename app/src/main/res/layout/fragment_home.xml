@@ -54,17 +54,18 @@
                 android:id="@+id/WeatherText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="140dp"
-                android:layout_marginEnd="144dp"
-                android:text="Небольшой дождь"
                 android:layout_gravity="center"
+                android:layout_marginStart="142dp"
+                android:layout_marginEnd="142dp"
+                android:layout_marginBottom="120dp"
                 android:gravity="center"
+                android:text="Небольшой дождь"
                 android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/FeelsLikeText"
-                app:layout_constraintVertical_bias="0.263" />
+                app:layout_constraintTop_toBottomOf="@+id/FeelsLikeText" />
 
             <TextView
                 android:id="@+id/FeelsLikeText"
@@ -243,10 +244,10 @@
 
             <TextView
                 android:id="@+id/t1"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="18dp"
+                android:layout_marginStart="17dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -254,10 +255,10 @@
 
             <TextView
                 android:id="@+id/t2"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="22dp"
+                android:layout_marginStart="20dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t1"
@@ -265,10 +266,10 @@
 
             <TextView
                 android:id="@+id/t3"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="19dp"
+                android:layout_marginStart="17dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t2"
@@ -276,10 +277,10 @@
 
             <TextView
                 android:id="@+id/t4"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="21dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="19dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t3"
@@ -287,10 +288,10 @@
 
             <TextView
                 android:id="@+id/t5"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="22dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="22dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t4"
@@ -298,34 +299,37 @@
 
             <TextView
                 android:id="@+id/t6"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="31dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="27dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t5"
                 app:layout_constraintTop_toBottomOf="@+id/i6" />
+
             <TextView
                 android:id="@+id/t7"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="29dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="28dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t6"
                 app:layout_constraintTop_toBottomOf="@+id/i7" />
+
             <TextView
                 android:id="@+id/t8"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="29dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="26dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t7"
                 app:layout_constraintTop_toBottomOf="@+id/i8" />
+
             <TextView
                 android:id="@+id/DataText2"
                 android:layout_width="wrap_content"
@@ -335,6 +339,7 @@
                 android:text="Завтра"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
                 android:id="@+id/textView10"
                 android:layout_width="wrap_content"
@@ -490,10 +495,10 @@
 
             <TextView
                 android:id="@+id/t9"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="18dp"
+                android:layout_marginStart="17dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -501,10 +506,10 @@
 
             <TextView
                 android:id="@+id/t10"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="22dp"
+                android:layout_marginStart="20dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t9"
@@ -512,10 +517,10 @@
 
             <TextView
                 android:id="@+id/t11"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="19dp"
+                android:layout_marginStart="17dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t10"
@@ -523,10 +528,10 @@
 
             <TextView
                 android:id="@+id/t12"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="21dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="19dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t11"
@@ -534,10 +539,10 @@
 
             <TextView
                 android:id="@+id/t13"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="22dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="20dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t12"
@@ -545,34 +550,37 @@
 
             <TextView
                 android:id="@+id/t14"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="31dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="29dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t13"
                 app:layout_constraintTop_toBottomOf="@+id/i14" />
+
             <TextView
                 android:id="@+id/t15"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="29dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="27dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t14"
                 app:layout_constraintTop_toBottomOf="@+id/i15" />
+
             <TextView
                 android:id="@+id/t16"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="29dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="27dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t15"
                 app:layout_constraintTop_toBottomOf="@+id/i16" />
+
             <TextView
                 android:id="@+id/DataText3"
                 android:layout_width="wrap_content"
@@ -582,6 +590,7 @@
                 android:text="Завтра"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
                 android:id="@+id/textView18"
                 android:layout_width="wrap_content"
@@ -737,10 +746,10 @@
 
             <TextView
                 android:id="@+id/t17"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="18dp"
+                android:layout_marginStart="17dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -748,10 +757,10 @@
 
             <TextView
                 android:id="@+id/t18"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="22dp"
+                android:layout_marginStart="20dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t17"
@@ -759,10 +768,10 @@
 
             <TextView
                 android:id="@+id/t19"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="19dp"
+                android:layout_marginStart="17dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t18"
@@ -770,10 +779,10 @@
 
             <TextView
                 android:id="@+id/t20"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="21dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="19dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t19"
@@ -781,10 +790,10 @@
 
             <TextView
                 android:id="@+id/t21"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="22dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="21dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t20"
@@ -792,34 +801,37 @@
 
             <TextView
                 android:id="@+id/t22"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="31dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="29dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t21"
                 app:layout_constraintTop_toBottomOf="@+id/i22" />
+
             <TextView
                 android:id="@+id/t23"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="29dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="27dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t22"
                 app:layout_constraintTop_toBottomOf="@+id/i23" />
+
             <TextView
                 android:id="@+id/t24"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="29dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="26dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t23"
                 app:layout_constraintTop_toBottomOf="@+id/i24" />
+
             <TextView
                 android:id="@+id/DataText4"
                 android:layout_width="wrap_content"
@@ -829,6 +841,7 @@
                 android:text="Завтра"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
                 android:id="@+id/textView26"
                 android:layout_width="wrap_content"
@@ -984,10 +997,10 @@
 
             <TextView
                 android:id="@+id/t25"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="18dp"
+                android:layout_marginStart="17dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -995,10 +1008,10 @@
 
             <TextView
                 android:id="@+id/t26"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="22dp"
+                android:layout_marginStart="20dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t25"
@@ -1006,10 +1019,10 @@
 
             <TextView
                 android:id="@+id/t27"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="19dp"
+                android:layout_marginStart="17dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t26"
@@ -1017,10 +1030,10 @@
 
             <TextView
                 android:id="@+id/t28"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="21dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="19dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t27"
@@ -1028,10 +1041,10 @@
 
             <TextView
                 android:id="@+id/t29"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="22dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="22dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t28"
@@ -1039,34 +1052,37 @@
 
             <TextView
                 android:id="@+id/t30"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="31dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="27dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t29"
                 app:layout_constraintTop_toBottomOf="@+id/i30" />
+
             <TextView
                 android:id="@+id/t31"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="29dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="27dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t30"
                 app:layout_constraintTop_toBottomOf="@+id/i31" />
+
             <TextView
                 android:id="@+id/t32"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="29dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="27dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t31"
                 app:layout_constraintTop_toBottomOf="@+id/i32" />
+
             <TextView
                 android:id="@+id/DataText5"
                 android:layout_width="wrap_content"
@@ -1076,6 +1092,7 @@
                 android:text="Завтра"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
                 android:id="@+id/textView34"
                 android:layout_width="wrap_content"
@@ -1231,10 +1248,10 @@
 
             <TextView
                 android:id="@+id/t33"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="18dp"
+                android:layout_marginStart="17dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -1242,10 +1259,10 @@
 
             <TextView
                 android:id="@+id/t34"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="22dp"
+                android:layout_marginStart="20dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t33"
@@ -1253,10 +1270,10 @@
 
             <TextView
                 android:id="@+id/t35"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="19dp"
+                android:layout_marginStart="17dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t34"
@@ -1264,10 +1281,10 @@
 
             <TextView
                 android:id="@+id/t36"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="21dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="19dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t35"
@@ -1275,10 +1292,10 @@
 
             <TextView
                 android:id="@+id/t37"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="22dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="21dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t36"
@@ -1286,528 +1303,36 @@
 
             <TextView
                 android:id="@+id/t38"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="31dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="29dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t37"
                 app:layout_constraintTop_toBottomOf="@+id/i38" />
+
             <TextView
                 android:id="@+id/t39"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="29dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="27dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t38"
                 app:layout_constraintTop_toBottomOf="@+id/i39" />
+
             <TextView
                 android:id="@+id/t40"
-                android:layout_width="24dp"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="29dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="26dp"
                 android:gravity="center"
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t39"
                 app:layout_constraintTop_toBottomOf="@+id/i40" />
-            <TextView
-                android:id="@+id/DataText6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="850dp"
-                android:text="Завтра"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-            <TextView
-                android:id="@+id/textView42"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="880dp"
-                android:text="0:00"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView43"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="880dp"
-                android:text="3:00"
-                app:layout_constraintStart_toEndOf="@+id/textView42"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView44"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="880dp"
-                android:text="6:00"
-                app:layout_constraintStart_toEndOf="@+id/textView43"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView45"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="880dp"
-                android:text="9:00"
-                app:layout_constraintStart_toEndOf="@+id/textView44"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView46"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="880dp"
-                android:text="12:00"
-                app:layout_constraintStart_toEndOf="@+id/textView45"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView47"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="880dp"
-                android:text="15:00"
-                app:layout_constraintStart_toEndOf="@+id/textView46"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView48"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="880dp"
-                android:text="18:00"
-                app:layout_constraintStart_toEndOf="@+id/textView47"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView49"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="880dp"
-                android:text="21:00"
-                app:layout_constraintStart_toEndOf="@+id/textView48"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
-            <ImageView
-                android:id="@+id/i41"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="18dp"
-                android:src="@drawable/main_icon"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textView42" />
-
-            <ImageView
-                android:id="@+id/i42"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="22dp"
-                android:src="@drawable/main_icon"
-                app:layout_constraintStart_toEndOf="@+id/i41"
-                app:layout_constraintTop_toBottomOf="@+id/textView43" />
-
-            <ImageView
-                android:id="@+id/i43"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="19dp"
-                android:src="@drawable/main_icon"
-                app:layout_constraintStart_toEndOf="@+id/i42"
-                app:layout_constraintTop_toBottomOf="@+id/textView44" />
-
-            <ImageView
-                android:id="@+id/i44"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="21dp"
-                android:src="@drawable/main_icon"
-                app:layout_constraintStart_toEndOf="@+id/i43"
-                app:layout_constraintTop_toBottomOf="@+id/textView45" />
-
-            <ImageView
-                android:id="@+id/i45"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="23dp"
-                android:src="@drawable/main_icon"
-                app:layout_constraintStart_toEndOf="@+id/i44"
-                app:layout_constraintTop_toBottomOf="@+id/textView46" />
-
-            <ImageView
-                android:id="@+id/i46"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:src="@drawable/main_icon"
-                app:layout_constraintStart_toEndOf="@+id/i45"
-                app:layout_constraintTop_toBottomOf="@+id/textView47" />
-
-            <ImageView
-                android:id="@+id/i47"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="29dp"
-                android:src="@drawable/main_icon"
-                app:layout_constraintStart_toEndOf="@+id/i46"
-                app:layout_constraintTop_toBottomOf="@+id/textView48" />
-
-            <ImageView
-                android:id="@+id/i48"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
-                android:src="@drawable/main_icon"
-                app:layout_constraintStart_toEndOf="@+id/i47"
-                app:layout_constraintTop_toBottomOf="@+id/textView49" />
-
-            <TextView
-                android:id="@+id/t41"
-                android:layout_width="24dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="18dp"
-                android:gravity="center"
-                android:text="0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/i41" />
-
-            <TextView
-                android:id="@+id/t42"
-                android:layout_width="24dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="22dp"
-                android:gravity="center"
-                android:text="0"
-                app:layout_constraintStart_toEndOf="@+id/t41"
-                app:layout_constraintTop_toBottomOf="@+id/i42" />
-
-            <TextView
-                android:id="@+id/t43"
-                android:layout_width="24dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="19dp"
-                android:gravity="center"
-                android:text="0"
-                app:layout_constraintStart_toEndOf="@+id/t42"
-                app:layout_constraintTop_toBottomOf="@+id/i43" />
-
-            <TextView
-                android:id="@+id/t44"
-                android:layout_width="24dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="21dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="0"
-                app:layout_constraintStart_toEndOf="@+id/t43"
-                app:layout_constraintTop_toBottomOf="@+id/i44" />
-
-            <TextView
-                android:id="@+id/t45"
-                android:layout_width="24dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="22dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="0"
-                app:layout_constraintStart_toEndOf="@+id/t44"
-                app:layout_constraintTop_toBottomOf="@+id/i45" />
-
-            <TextView
-                android:id="@+id/t46"
-                android:layout_width="24dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="31dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="0"
-                app:layout_constraintStart_toEndOf="@+id/t45"
-                app:layout_constraintTop_toBottomOf="@+id/i46" />
-            <TextView
-                android:id="@+id/t47"
-                android:layout_width="24dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="29dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="0"
-                app:layout_constraintStart_toEndOf="@+id/t46"
-                app:layout_constraintTop_toBottomOf="@+id/i47" />
-            <TextView
-                android:id="@+id/t48"
-                android:layout_width="24dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="29dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="0"
-                app:layout_constraintStart_toEndOf="@+id/t47"
-                app:layout_constraintTop_toBottomOf="@+id/i48" />
-            <TextView
-                android:id="@+id/DataText7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="950dp"
-                android:text="Завтра"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-            <TextView
-                android:id="@+id/textView50"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="980dp"
-                android:text="0:00"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView51"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="980dp"
-                android:text="3:00"
-                app:layout_constraintStart_toEndOf="@+id/textView50"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView52"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="980dp"
-                android:text="6:00"
-                app:layout_constraintStart_toEndOf="@+id/textView51"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView53"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="980dp"
-                android:text="9:00"
-                app:layout_constraintStart_toEndOf="@+id/textView52"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView54"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="980dp"
-                android:text="12:00"
-                app:layout_constraintStart_toEndOf="@+id/textView53"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView55"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="980dp"
-                android:text="15:00"
-                app:layout_constraintStart_toEndOf="@+id/textView54"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView56"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="980dp"
-                android:text="18:00"
-                app:layout_constraintStart_toEndOf="@+id/textView55"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView57"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="980dp"
-                android:text="21:00"
-                app:layout_constraintStart_toEndOf="@+id/textView56"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
-            <ImageView
-                android:id="@+id/i49"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="18dp"
-                android:src="@drawable/main_icon"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textView50" />
-
-            <ImageView
-                android:id="@+id/i50"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="22dp"
-                android:src="@drawable/main_icon"
-                app:layout_constraintStart_toEndOf="@+id/i49"
-                app:layout_constraintTop_toBottomOf="@+id/textView51" />
-
-            <ImageView
-                android:id="@+id/i51"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="19dp"
-                android:src="@drawable/main_icon"
-                app:layout_constraintStart_toEndOf="@+id/i50"
-                app:layout_constraintTop_toBottomOf="@+id/textView52" />
-
-            <ImageView
-                android:id="@+id/i52"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="21dp"
-                android:src="@drawable/main_icon"
-                app:layout_constraintStart_toEndOf="@+id/i51"
-                app:layout_constraintTop_toBottomOf="@+id/textView53" />
-
-            <ImageView
-                android:id="@+id/i53"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="23dp"
-                android:src="@drawable/main_icon"
-                app:layout_constraintStart_toEndOf="@+id/i52"
-                app:layout_constraintTop_toBottomOf="@+id/textView54" />
-
-            <ImageView
-                android:id="@+id/i54"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:src="@drawable/main_icon"
-                app:layout_constraintStart_toEndOf="@+id/i53"
-                app:layout_constraintTop_toBottomOf="@+id/textView55" />
-
-            <ImageView
-                android:id="@+id/i55"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="29dp"
-                android:src="@drawable/main_icon"
-                app:layout_constraintStart_toEndOf="@+id/i54"
-                app:layout_constraintTop_toBottomOf="@+id/textView55" />
-
-            <ImageView
-                android:id="@+id/i56"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
-                android:src="@drawable/main_icon"
-                app:layout_constraintStart_toEndOf="@+id/i55"
-                app:layout_constraintTop_toBottomOf="@+id/textView56" />
-
-            <TextView
-                android:id="@+id/t49"
-                android:layout_width="24dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="18dp"
-                android:gravity="center"
-                android:text="0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/i49" />
-
-            <TextView
-                android:id="@+id/t50"
-                android:layout_width="24dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="22dp"
-                android:gravity="center"
-                android:text="0"
-                app:layout_constraintStart_toEndOf="@+id/t49"
-                app:layout_constraintTop_toBottomOf="@+id/i50" />
-
-            <TextView
-                android:id="@+id/t51"
-                android:layout_width="24dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="19dp"
-                android:gravity="center"
-                android:text="0"
-                app:layout_constraintStart_toEndOf="@+id/t50"
-                app:layout_constraintTop_toBottomOf="@+id/i51" />
-
-            <TextView
-                android:id="@+id/t52"
-                android:layout_width="24dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="21dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="0"
-                app:layout_constraintStart_toEndOf="@+id/t51"
-                app:layout_constraintTop_toBottomOf="@+id/i52" />
-
-            <TextView
-                android:id="@+id/t53"
-                android:layout_width="24dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="22dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="0"
-                app:layout_constraintStart_toEndOf="@+id/t52"
-                app:layout_constraintTop_toBottomOf="@+id/i53" />
-
-            <TextView
-                android:id="@+id/t54"
-                android:layout_width="24dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="31dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="0"
-                app:layout_constraintStart_toEndOf="@+id/t53"
-                app:layout_constraintTop_toBottomOf="@+id/i54" />
-            <TextView
-                android:id="@+id/t55"
-                android:layout_width="24dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="29dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="0"
-                app:layout_constraintStart_toEndOf="@+id/t54"
-                app:layout_constraintTop_toBottomOf="@+id/i55" />
-            <TextView
-                android:id="@+id/t56"
-                android:layout_width="24dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="29dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="0"
-                app:layout_constraintStart_toEndOf="@+id/t55"
-                app:layout_constraintTop_toBottomOf="@+id/i56" />
 
 
 

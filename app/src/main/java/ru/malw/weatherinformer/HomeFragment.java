@@ -8,12 +8,15 @@ import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
-import androidx.fragment.app.Fragment;
 
+import androidx.appcompat.widget.TooltipCompat;
+import androidx.fragment.app.Fragment;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -41,9 +44,35 @@ public class HomeFragment extends Fragment {
 
                 getActivity().runOnUiThread(() -> {
                     try {
-                        ((TextView) root.findViewById(R.id.TemperatureText)).setText(weather.getJSONArray("list").getJSONObject(0).getJSONObject("main").getString("temp"));
+                        for (int e = 1; e <= 40; e++) {
+                            if(e == 39){
+                                System.out.println("fff");
+                            }
+                            int textViewId = getResources().getIdentifier("t" + e, "id", requireActivity().getPackageName());
+                            int imageViewId = getResources().getIdentifier("i" + e, "id", requireActivity().getPackageName());
+
+                            TextView t = root.findViewById(textViewId);
+                            ImageView i = root.findViewById(imageViewId);
+
+                            try {
+                                double temperature = weather.getJSONArray("list").getJSONObject(e).getJSONObject("main").getDouble("temp");
+                                int roundedTemperature = (int) Math.round(temperature);
+                                t.setText(roundedTemperature + "°");
+                                String icon = "i"+weather.getJSONArray("list").getJSONObject(e).getJSONArray("weather").getJSONObject(0).getString("icon").substring(0, 2);
+                                int iconResourceId = getResources().getIdentifier(icon, "drawable", requireActivity().getPackageName());
+                                i.setImageResource(iconResourceId);
+                                i.setContentDescription(weather.getJSONArray("list").getJSONObject(e).getJSONArray("weather").getJSONObject(0).getString("description"));
+                                TooltipCompat.setTooltipText(i, weather.getJSONArray("list").getJSONObject(e).getJSONArray("weather").getJSONObject(0).getString("description"));
+                            } catch (Exception ex) {
+                                t.setText("???");
+                                ex.printStackTrace();
+                                i.setImageResource(R.drawable.unknown);
+                                //i.setContentDescription(getString(R.string.unknown));
+                            }
+                        }
+                        ((TextView) root.findViewById(R.id.TemperatureText)).setText(String.valueOf(Math.round(Double.parseDouble(weather.getJSONArray("list").getJSONObject(0).getJSONObject("main").getString("temp")))));
                         ((TextView) root.findViewById(R.id.WeatherText)).setText(weather.getJSONArray("list").getJSONObject(0).getJSONArray("weather").getJSONObject(0).getString("description"));
-                        ((TextView) root.findViewById(R.id.FeelsLikeText)).setText("Ощущается как " + weather.getJSONArray("list").getJSONObject(0).getJSONObject("main").getString("feels_like"));
+                        ((TextView) root.findViewById(R.id.FeelsLikeText)).setText("Ощущается как " + Math.round(Double.parseDouble(weather.getJSONArray("list").getJSONObject(0).getJSONObject("main").getString("feels_like"))));
                     } catch (JSONException e) {
                         throw new RuntimeException(e);
                     }
