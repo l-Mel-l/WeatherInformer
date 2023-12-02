@@ -12,6 +12,8 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 
 
+import com.example.weatherinformer.R;
+
 import java.util.Locale;
 
 public class SettingsFragment extends Fragment {

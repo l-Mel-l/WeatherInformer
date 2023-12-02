@@ -14,6 +14,8 @@ import android.widget.TextView;
 import androidx.appcompat.widget.TooltipCompat;
 import androidx.fragment.app.Fragment;
 
+import com.example.weatherinformer.R;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -32,6 +34,7 @@ public class HomeFragment extends Fragment {
         root = inflater.inflate(R.layout.fragment_home, container, false);
         refresh(getContext());
         return root;
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 
     private void refresh(Context context) {
