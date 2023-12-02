@@ -45,9 +45,6 @@ public class HomeFragment extends Fragment {
                 getActivity().runOnUiThread(() -> {
                     try {
                         for (int e = 1; e <= 40; e++) {
-                            if(e == 39){
-                                System.out.println("fff");
-                            }
                             int textViewId = getResources().getIdentifier("t" + e, "id", requireActivity().getPackageName());
                             int imageViewId = getResources().getIdentifier("i" + e, "id", requireActivity().getPackageName());
 

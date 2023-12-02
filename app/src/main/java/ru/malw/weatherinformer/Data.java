@@ -5,7 +5,7 @@ public class Data {
     public static boolean UseFahrenheit = false;
     public static int CityID = 511565;
     public static String CityFriendlyName;
-    public static String language;
+    public static String language = "ru";
     public static boolean tray;
 
 }

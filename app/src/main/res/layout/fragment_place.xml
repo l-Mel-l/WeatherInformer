@@ -6,11 +6,23 @@
     android:background="#1AFFBE"
     tools:context="ru.malw.weatherinformer.PlaceFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Окошко с выбором городов, цвет кайф кста"
-        android:textSize="30dp" />
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/locationEditText"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#1AFFBE"
+            android:src="@drawable/place_bar" />
+
+        <ListView
+            android:id="@+id/cityListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
 
 </FrameLayout>
