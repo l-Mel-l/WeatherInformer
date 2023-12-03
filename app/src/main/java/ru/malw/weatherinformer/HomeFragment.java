@@ -190,6 +190,6 @@ public class HomeFragment extends Fragment {
         PendingIntent pendingIntent = PendingIntent.getBroadcast(requireContext(), 0, intent, 0);
 
         // Устанавливаем повторяющееся событие каждые три часа
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), 3, pendingIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), 300, pendingIntent);
     }
 }
