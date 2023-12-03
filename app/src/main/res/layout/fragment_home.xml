@@ -82,7 +82,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/TemperatureText" />
 
             <TextView
-                android:id="@+id/DataText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -333,7 +332,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/i8" />
 
             <TextView
-                android:id="@+id/DataText2"
+                android:id="@+id/d9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -584,7 +583,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/i16" />
 
             <TextView
-                android:id="@+id/DataText3"
+                android:id="@+id/d17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -835,7 +834,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/i24" />
 
             <TextView
-                android:id="@+id/DataText4"
+                android:id="@+id/d25"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -1086,7 +1085,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/i32" />
 
             <TextView
-                android:id="@+id/DataText5"
+                android:id="@+id/d33"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
