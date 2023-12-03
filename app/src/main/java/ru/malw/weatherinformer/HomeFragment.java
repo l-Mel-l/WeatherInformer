@@ -176,13 +176,15 @@ public class HomeFragment extends Fragment {
         Intent intent = new Intent(requireContext(), WeatherNotificationReceiver.class);
 
         // Добавь следующие строки для передачи данных о погоде в Intent
-        double currentTemperature = Double.parseDouble(((TextView) root.findViewById(R.id.TemperatureText)).getText().toString());
+        int currentTemperature = Integer.parseInt(((TextView) root.findViewById(R.id.TemperatureText)).getText().toString());
         String currentDescription = ((TextView) root.findViewById(R.id.WeatherText)).getText().toString();
+        String currentCity = ((TextView) root.findViewById(R.id.CityText)).getText().toString();
         intent.putExtra("currentTemperature", currentTemperature);
         intent.putExtra("currentDescription", currentDescription);
+        intent.putExtra("currentCity", currentCity);
 
         // Также добавь следующие строки для получения данных о погоде через 3 часа
-        double futureTemperature = Double.parseDouble(((TextView) root.findViewById(R.id.t1)).getText().toString().replace("°", ""));
+        int futureTemperature = Integer.parseInt    (((TextView) root.findViewById(R.id.t1)).getText().toString().replace("°", ""));
         String futureDescription = ((ImageView) root.findViewById(R.id.i1)).getContentDescription().toString();
         intent.putExtra("futureTemperature", futureTemperature);
         intent.putExtra("futureDescription", futureDescription);
@@ -190,6 +192,6 @@ public class HomeFragment extends Fragment {
         PendingIntent pendingIntent = PendingIntent.getBroadcast(requireContext(), 0, intent, 0);
 
         // Устанавливаем повторяющееся событие каждые три часа
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), 300, pendingIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), 3 * 60 * 60 * 1000, pendingIntent);
     }
 }
