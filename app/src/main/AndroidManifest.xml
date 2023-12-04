@@ -25,7 +25,7 @@
         </intent-filter>
         </activity>
         <activity
-            android:name=".PlaceActivity"
+            android:name=".AddCity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1AFFBE"
-    tools:context="ru.malw.weatherinformer.PlaceFragment">
+    tools:context="ru.malw.weatherinformer.CitiesListFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
             android:src="@drawable/place_bar" />
 
         <ListView
-            android:id="@+id/cityListView"
+            android:id="@+id/cities"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 

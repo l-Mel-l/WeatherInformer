@@ -37,7 +37,6 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.Executors;
 public class HomeFragment extends Fragment {
     private View root;
     private static final int REQUEST_CODE = 1;
@@ -292,18 +291,19 @@ public class HomeFragment extends Fragment {
                 });
             } catch (IOException | JSONException e) {
                 new Handler(Looper.getMainLooper()).post(() ->
-                        new AlertDialog.Builder(context)
-                            .setTitle("Ошибка отправки запроса!")
-                            .setMessage("Попробуйте сменить IP адрес (перезагрузить роутер или использовать VPN). Показать рекомендуемый VPN-сервис?")
-                            .setPositiveButton("Да", (dialog, which) -> {
-                                context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://zelenka.guru/threads/4807721")));
-                                dialog.dismiss();})
-                            .setNegativeButton("Нет", null)
-                            .show()
+                    new AlertDialog.Builder(context)
+                        .setTitle("Ошибка отправки запроса!")
+                        .setMessage("Попробуйте сменить IP адрес (перезагрузить роутер или использовать VPN). Показать рекомендуемый VPN-сервис?")
+                        .setPositiveButton("Да", (dialog, which) -> {
+                            context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://zelenka.guru/threads/4807721")));
+                            dialog.dismiss();})
+                        .setNegativeButton("Нет", null)
+                        .show()
                 );
             }
-        }, Executors.newSingleThreadExecutor()).thenRun(() -> Executors.newSingleThreadExecutor().shutdown());
+        }).join();
     }
+
     private void getLocationUpdates() {
         LocationManager locationManager = (LocationManager) requireContext().getSystemService(Context.LOCATION_SERVICE);
         if (locationManager != null) {
