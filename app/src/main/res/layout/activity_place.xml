@@ -37,6 +37,7 @@
             android:background="@color/white"
             android:src="@drawable/position_icon" />
 
+
     </LinearLayout>
 
     <ListView
