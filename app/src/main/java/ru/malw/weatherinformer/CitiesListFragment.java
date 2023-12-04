@@ -25,6 +25,7 @@ public class CitiesListFragment extends Fragment {
         super.onCreate(savedInstanceState);
         adapter = new CityAdapter(getContext(), R.layout.cities_list, MainActivity.db.retrieveCities(), (v) -> {
             Data.CityID = Integer.parseInt(v.getTag().toString());
+            Data.change(getActivity(), "CityID", Integer.parseInt(v.getTag().toString()));
         });
         activityLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),

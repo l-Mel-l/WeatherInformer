@@ -1,19 +1,38 @@
 package ru.malw.weatherinformer;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+
 import ru.malw.weatherinformer.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     static DataBase db;
-    @SuppressLint("NonConstantResourceId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         db = new DataBase(this);
+        Data.updateSettings(this);
+        if (Data.CityID == 0) {
+            registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+                if (result.getResultCode() == Activity.RESULT_OK) {
+                    Intent data = result.getData();
+                    Data.change(this, "CityID", data.getIntExtra("id", 0));
+                    Data.CityID = data.getIntExtra("id", 0);
+                    init();
+                }
+                else finish();
+            }).launch(new Intent(this, AddCity.class));
+        }
+        else init();
+    }
+    @SuppressLint("NonConstantResourceId")
+    private void init() {
         ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -35,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
             }
             return true;
         });
-
     }
+
     private void replaceFragment(Fragment fragment){
         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPlace, fragment).commit();
     }

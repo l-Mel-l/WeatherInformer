@@ -38,7 +38,7 @@ public class AddCity extends AppCompatActivity {
     private void search(String query, ListView list) {
         CompletableFuture.runAsync(() -> {
             try {
-                HttpURLConnection connection = (HttpURLConnection) new URL("https://api.openweathermap.org/data/2.5/find?q=" + query + "&appid=" + Data.token).openConnection();
+                HttpURLConnection connection = (HttpURLConnection) new URL("https://api.openweathermap.org/data/2.5/find?q=" + query.trim() + "&appid=" + Data.token).openConnection();
                 connection.setRequestMethod("GET");
                 connection.getResponseCode();
                 if (query.equals("")) {
