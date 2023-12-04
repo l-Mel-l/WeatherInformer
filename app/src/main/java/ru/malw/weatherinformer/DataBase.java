@@ -26,18 +26,15 @@ public class DataBase {
     public List<JSONObject> retrieveCities() {
         List<JSONObject> citiesList = new ArrayList<>();
 
-        Cursor cursor = db.rawQuery("SELECT id, FriendlyName FROM Cities", null);
-        try {
+        try (Cursor cursor = db.rawQuery("SELECT id, FriendlyName FROM Cities", null)) {
             while (cursor.moveToNext()) {
                 JSONObject cityObject = new JSONObject()
-                    .put("id", cursor.getInt(cursor.getColumnIndex("id")))
-                    .put("name", cursor.getString(cursor.getColumnIndex("FriendlyName")));
+                        .put("id", cursor.getInt(cursor.getColumnIndex("id")))
+                        .put("name", cursor.getString(cursor.getColumnIndex("FriendlyName")));
                 citiesList.add(cityObject);
             }
         } catch (JSONException e) {
             e.printStackTrace();
-        } finally {
-            cursor.close();
         }
         return citiesList;
     }
