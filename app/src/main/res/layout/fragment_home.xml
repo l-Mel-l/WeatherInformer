@@ -5,8 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="ru.malw.weatherinformer.HomeFragment">
-
-    <!-- TODO: Update blank fragment layout -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -1330,9 +1328,6 @@
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/t39"
                 app:layout_constraintTop_toBottomOf="@+id/i40" />
-
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </FrameLayout>

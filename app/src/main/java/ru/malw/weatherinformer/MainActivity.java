@@ -8,13 +8,15 @@ import androidx.fragment.app.Fragment;
 import ru.malw.weatherinformer.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
-    ActivityMainBinding binding;
+    static DataBase db;
     @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        db = new DataBase(this);
+        ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
         replaceFragment(new HomeFragment());
         getSupportActionBar().hide();
         binding.bottomNavigationView.getMenu().findItem(R.id.main).setChecked(true);
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                     replaceFragment(new HomeFragment());
                     break;
                 case R.id.cities:
-                    replaceFragment(new PlaceFragment());
+                    replaceFragment(new CitiesListFragment());
                     break;
                 case R.id.settings:
                     replaceFragment(new SettingsFragment());
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
             }
             return true;
         });
+
     }
     private void replaceFragment(Fragment fragment){
         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPlace, fragment).commit();
