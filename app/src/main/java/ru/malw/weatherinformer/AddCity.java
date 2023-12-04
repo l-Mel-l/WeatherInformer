@@ -32,7 +32,7 @@ public class AddCity extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_place);
         findViewById(R.id.backButton).setOnClickListener(v -> finish());
-        findViewById(R.id.searchButton).setOnClickListener(v -> search(((TextView)findViewById(R.id.cityEditText)).getText().toString(), (ListView)findViewById(R.id.cityListView)));
+        findViewById(R.id.searchButton).setOnClickListener(v -> search(((TextView)findViewById(R.id.cityEditText)).getText().toString(), findViewById(R.id.cityListView)));
     }
 
     private void search(String query, ListView list) {

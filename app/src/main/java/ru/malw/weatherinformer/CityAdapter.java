@@ -19,9 +19,9 @@ import java.util.List;
 
 public class CityAdapter extends ArrayAdapter<JSONObject> {
 
-    private int layoutResourceId;
-    private List<JSONObject> data;
-    private View.OnClickListener onClickListener;
+    private final int layoutResourceId;
+    private final List<JSONObject> data;
+    private final View.OnClickListener onClickListener;
 
     public CityAdapter(Context context, int resource, List<JSONObject> data, View.OnClickListener l) {
         super(context, resource, data);

@@ -88,181 +88,181 @@ public class HomeFragment extends Fragment {
                                 } else {
                                     root.setBackgroundResource(R.drawable.sun_back);
                                 }
-                                TextView textView1 = (TextView) root.findViewById(R.id.d1);
-                                TextView textView2 = (TextView) root.findViewById(R.id.t1);
+                                TextView textView1 = root.findViewById(R.id.d1);
+                                TextView textView2 = root.findViewById(R.id.t1);
                                 textView1.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
                                         if (textView2.getVisibility() == View.INVISIBLE) {
                                             for (int x = 1; x <= 8; x++) {
                                                 int resId = getResources().getIdentifier("t" + x, "id", requireActivity().getPackageName());
-                                                TextView textView = (TextView) root.findViewById(resId);
+                                                TextView textView = root.findViewById(resId);
                                                 textView.setVisibility(View.VISIBLE); // или View.GONE, в зависимости от вашего случая
 
                                                 int resId2 = getResources().getIdentifier("i" + x, "id", requireActivity().getPackageName());
-                                                ImageView imageView = (ImageView) root.findViewById(resId2);
+                                                ImageView imageView = root.findViewById(resId2);
                                                 imageView.setVisibility(View.VISIBLE); // или View.GONE, в зависимости от вашего случая
 
                                                 int resId3 = getResources().getIdentifier("textView" + x, "id", requireActivity().getPackageName());
-                                                TextView Date = (TextView) root.findViewById(resId3);
+                                                TextView Date = root.findViewById(resId3);
                                                 Date.setVisibility(View.VISIBLE); // или View.GONE, в зависимости от вашего случая
                                             }
                                         } else {
                                             for (int x = 1; x <= 8; x++) {
                                                 int resId = getResources().getIdentifier("t" + x, "id", requireActivity().getPackageName());
-                                                TextView textView = (TextView) root.findViewById(resId);
+                                                TextView textView = root.findViewById(resId);
                                                 textView.setVisibility(View.INVISIBLE); // или View.GONE, в зависимости от вашего случая
 
                                                 int resId2 = getResources().getIdentifier("i" + x, "id", requireActivity().getPackageName());
-                                                ImageView imageView = (ImageView) root.findViewById(resId2);
+                                                ImageView imageView = root.findViewById(resId2);
                                                 imageView.setVisibility(View.INVISIBLE); // или View.GONE, в зависимости от вашего случая
 
                                                 int resId3 = getResources().getIdentifier("textView" + x, "id", requireActivity().getPackageName());
-                                                TextView Date = (TextView) root.findViewById(resId3);
+                                                TextView Date = root.findViewById(resId3);
                                                 Date.setVisibility(View.INVISIBLE); // или View.GONE, в зависимости от вашего случая
                                             }
                                         }
                                     }
                                 });
-                                TextView textView3 = (TextView) root.findViewById(R.id.d9);
-                                TextView textView4 = (TextView) root.findViewById(R.id.t9);
+                                TextView textView3 = root.findViewById(R.id.d9);
+                                TextView textView4 = root.findViewById(R.id.t9);
                                 textView3.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
                                         if (textView4.getVisibility() == View.INVISIBLE) {
                                             for (int i = 9; i <= 16; i++) {
                                                 int resId = getResources().getIdentifier("t" + i, "id", requireActivity().getPackageName());
-                                                TextView textView = (TextView) root.findViewById(resId);
+                                                TextView textView = root.findViewById(resId);
                                                 textView.setVisibility(View.VISIBLE); // или View.GONE, в зависимости от вашего случая
 
                                                 int resId2 = getResources().getIdentifier("i" + i, "id", requireActivity().getPackageName());
-                                                ImageView imageView = (ImageView) root.findViewById(resId2);
+                                                ImageView imageView = root.findViewById(resId2);
                                                 imageView.setVisibility(View.VISIBLE); // или View.GONE, в зависимости от вашего случая
 
                                                 int resId3 = getResources().getIdentifier("textView" + i, "id", requireActivity().getPackageName());
-                                                TextView Date = (TextView) root.findViewById(resId3);
+                                                TextView Date = root.findViewById(resId3);
                                                 Date.setVisibility(View.VISIBLE); // или View.GONE, в зависимости от вашего случая
                                             }
                                         } else {
                                             for (int i = 9; i <= 16; i++) {
                                                 int resId = getResources().getIdentifier("t" + i, "id", requireActivity().getPackageName());
-                                                TextView textView = (TextView) root.findViewById(resId);
+                                                TextView textView = root.findViewById(resId);
                                                 textView.setVisibility(View.INVISIBLE); // или View.GONE, в зависимости от вашего случая
 
                                                 int resId2 = getResources().getIdentifier("i" + i, "id", requireActivity().getPackageName());
-                                                ImageView imageView = (ImageView) root.findViewById(resId2);
+                                                ImageView imageView = root.findViewById(resId2);
                                                 imageView.setVisibility(View.INVISIBLE); // или View.GONE, в зависимости от вашего случая
 
                                                 int resId3 = getResources().getIdentifier("textView" + i, "id", requireActivity().getPackageName());
-                                                TextView Date = (TextView) root.findViewById(resId3);
+                                                TextView Date = root.findViewById(resId3);
                                                 Date.setVisibility(View.INVISIBLE); // или View.GONE, в зависимости от вашего случая
                                             }
                                         }
                                     }
                                 });
-                                TextView textView5 = (TextView) root.findViewById(R.id.d17);
-                                TextView textView6 = (TextView) root.findViewById(R.id.t18);
+                                TextView textView5 = root.findViewById(R.id.d17);
+                                TextView textView6 = root.findViewById(R.id.t18);
                                 textView5.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
                                         if (textView6.getVisibility() == View.INVISIBLE) {
                                             for (int x = 17; x <= 24; x++) {
                                                 int resId = getResources().getIdentifier("t" + x, "id", requireActivity().getPackageName());
-                                                TextView textView = (TextView) root.findViewById(resId);
+                                                TextView textView = root.findViewById(resId);
                                                 textView.setVisibility(View.VISIBLE); // или View.GONE, в зависимости от вашего случая
 
                                                 int resId2 = getResources().getIdentifier("i" + x, "id", requireActivity().getPackageName());
-                                                ImageView imageView = (ImageView) root.findViewById(resId2);
+                                                ImageView imageView = root.findViewById(resId2);
                                                 imageView.setVisibility(View.VISIBLE); // или View.GONE, в зависимости от вашего случая
 
                                                 int resId3 = getResources().getIdentifier("textView" + x, "id", requireActivity().getPackageName());
-                                                TextView Date = (TextView) root.findViewById(resId3);
+                                                TextView Date = root.findViewById(resId3);
                                                 Date.setVisibility(View.VISIBLE); // или View.GONE, в зависимости от вашего случая
                                             }
                                         } else {
                                             for (int x = 17; x <= 24; x++) {
                                                 int resId = getResources().getIdentifier("t" + x, "id", requireActivity().getPackageName());
-                                                TextView textView = (TextView) root.findViewById(resId);
+                                                TextView textView = root.findViewById(resId);
                                                 textView.setVisibility(View.INVISIBLE); // или View.GONE, в зависимости от вашего случая
 
                                                 int resId2 = getResources().getIdentifier("i" + x, "id", requireActivity().getPackageName());
-                                                ImageView imageView = (ImageView) root.findViewById(resId2);
+                                                ImageView imageView = root.findViewById(resId2);
                                                 imageView.setVisibility(View.INVISIBLE); // или View.GONE, в зависимости от вашего случая
 
                                                 int resId3 = getResources().getIdentifier("textView" + x, "id", requireActivity().getPackageName());
-                                                TextView Date = (TextView) root.findViewById(resId3);
+                                                TextView Date = root.findViewById(resId3);
                                                 Date.setVisibility(View.INVISIBLE); // или View.GONE, в зависимости от вашего случая
                                             }
                                         }
                                     }
                                 });
-                                TextView textView7 = (TextView) root.findViewById(R.id.d25);
-                                TextView textView8 = (TextView) root.findViewById(R.id.t26);
+                                TextView textView7 = root.findViewById(R.id.d25);
+                                TextView textView8 = root.findViewById(R.id.t26);
                                 textView7.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
                                         if (textView8.getVisibility() == View.INVISIBLE) {
                                             for (int x = 25; x <= 32; x++) {
                                                 int resId = getResources().getIdentifier("t" + x, "id", requireActivity().getPackageName());
-                                                TextView textView = (TextView) root.findViewById(resId);
+                                                TextView textView = root.findViewById(resId);
                                                 textView.setVisibility(View.VISIBLE); // или View.GONE, в зависимости от вашего случая
 
                                                 int resId2 = getResources().getIdentifier("i" + x, "id", requireActivity().getPackageName());
-                                                ImageView imageView = (ImageView) root.findViewById(resId2);
+                                                ImageView imageView = root.findViewById(resId2);
                                                 imageView.setVisibility(View.VISIBLE); // или View.GONE, в зависимости от вашего случая
 
                                                 int resId3 = getResources().getIdentifier("textView" + x, "id", requireActivity().getPackageName());
-                                                TextView Date = (TextView) root.findViewById(resId3);
+                                                TextView Date = root.findViewById(resId3);
                                                 Date.setVisibility(View.VISIBLE); // или View.GONE, в зависимости от вашего случая
                                             }
                                         } else {
                                             for (int x = 25; x <= 32; x++) {
                                                 int resId = getResources().getIdentifier("t" + x, "id", requireActivity().getPackageName());
-                                                TextView textView = (TextView) root.findViewById(resId);
+                                                TextView textView = root.findViewById(resId);
                                                 textView.setVisibility(View.INVISIBLE); // или View.GONE, в зависимости от вашего случая
 
                                                 int resId2 = getResources().getIdentifier("i" + x, "id", requireActivity().getPackageName());
-                                                ImageView imageView = (ImageView) root.findViewById(resId2);
+                                                ImageView imageView = root.findViewById(resId2);
                                                 imageView.setVisibility(View.INVISIBLE); // или View.GONE, в зависимости от вашего случая
 
                                                 int resId3 = getResources().getIdentifier("textView" + x, "id", requireActivity().getPackageName());
-                                                TextView Date = (TextView) root.findViewById(resId3);
+                                                TextView Date = root.findViewById(resId3);
                                                 Date.setVisibility(View.INVISIBLE); // или View.GONE, в зависимости от вашего случая
                                             }
                                         }
                                     }
                                 });
-                                TextView textView9 = (TextView) root.findViewById(R.id.d33);
-                                TextView textView10 = (TextView) root.findViewById(R.id.t34);
+                                TextView textView9 = root.findViewById(R.id.d33);
+                                TextView textView10 = root.findViewById(R.id.t34);
                                 textView9.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
                                         if (textView10.getVisibility() == View.INVISIBLE) {
                                             for (int x = 33; x <= 40; x++) {
                                                 int resId = getResources().getIdentifier("t" + x, "id", requireActivity().getPackageName());
-                                                TextView textView = (TextView) root.findViewById(resId);
+                                                TextView textView = root.findViewById(resId);
                                                 textView.setVisibility(View.VISIBLE); // или View.GONE, в зависимости от вашего случая
 
                                                 int resId2 = getResources().getIdentifier("i" + x, "id", requireActivity().getPackageName());
-                                                ImageView imageView = (ImageView) root.findViewById(resId2);
+                                                ImageView imageView = root.findViewById(resId2);
                                                 imageView.setVisibility(View.VISIBLE); // или View.GONE, в зависимости от вашего случая
 
                                                 int resId3 = getResources().getIdentifier("textView" + x, "id", requireActivity().getPackageName());
-                                                TextView Date = (TextView) root.findViewById(resId3);
+                                                TextView Date = root.findViewById(resId3);
                                                 Date.setVisibility(View.VISIBLE); // или View.GONE, в зависимости от вашего случая
                                             }
                                         } else {
                                             for (int x = 33; x <= 40; x++) {
                                                 int resId = getResources().getIdentifier("t" + x, "id", requireActivity().getPackageName());
-                                                TextView textView = (TextView) root.findViewById(resId);
+                                                TextView textView = root.findViewById(resId);
                                                 textView.setVisibility(View.INVISIBLE); // или View.GONE, в зависимости от вашего случая
 
                                                 int resId2 = getResources().getIdentifier("i" + x, "id", requireActivity().getPackageName());
-                                                ImageView imageView = (ImageView) root.findViewById(resId2);
+                                                ImageView imageView = root.findViewById(resId2);
                                                 imageView.setVisibility(View.INVISIBLE); // или View.GONE, в зависимости от вашего случая
 
                                                 int resId3 = getResources().getIdentifier("textView" + x, "id", requireActivity().getPackageName());
-                                                TextView Date = (TextView) root.findViewById(resId3);
+                                                TextView Date = root.findViewById(resId3);
                                                 Date.setVisibility(View.INVISIBLE); // или View.GONE, в зависимости от вашего случая
                                             }
                                         }
