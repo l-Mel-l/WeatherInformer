@@ -6,4 +6,21 @@
     <string name="settings">Settings</string>
     <string name="temperature_label">Measure temperature in degrees:</string>
     <string name="language_label">Language:</string>
+    <string name="incity">It\'s %value% in %city%</string>
+    <string name="ExcSendZnach">Error sending request!</string>
+    <string name="ExcInternet">\"Try changing the IP address (reboot the router or use a VPN)</string>
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+    <string name="Unknown">Unknown</string>
+    <string name="citiesSearch">Search cities</string>
+    <string name="NormalZaprocpz">Enter a normal query!</string>
+    <string name="NoFound">" Nothing found!"</string>
+    <string name="UpdateInfo">Update information...</string>
+    <string name="EnterNameCity">Enter the name of the city</string>
+    <string name="Zavtra">Tomorrow</string>
+    <string name="Celsius">Celsius</string>
+    <string name="Farr">Fahrenheit</string>
+    <string name="Enable_notifications">Enable notifications</string>
+    <string name="Close">Close</string>
+    <string name="feelslike">, feels like</string>
 </resources>

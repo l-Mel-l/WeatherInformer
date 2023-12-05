@@ -24,7 +24,7 @@
             android:layout_weight="1"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:hint="Введите название города"
+            android:hint="@string/EnterNameCity"
             android:inputType="text"
             android:maxLines="1"
             android:imeOptions="actionSearch"/>

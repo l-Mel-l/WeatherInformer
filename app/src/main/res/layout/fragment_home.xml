@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="5dp"
-                android:text="Обновление информации"
+                android:text="@string/UpdateInfo"
                 android:textSize="40sp" />
 
             <LinearLayout
@@ -84,7 +84,7 @@
                     android:layout_centerHorizontal="true"
                     android:drawableEnd="@drawable/dropdown"
                     android:onClick="expand"
-                    android:text="Завтра"
+                    android:text="@string/Zavtra"
                     android:textSize="23dp"
                     android:textStyle="bold" />
 
@@ -349,7 +349,7 @@
                     android:layout_centerHorizontal="true"
                     android:drawableEnd="@drawable/dropdown"
                     android:onClick="expand"
-                    android:text="Завтра"
+                    android:text="@string/Zavtra"
                     android:textSize="23dp"
                     android:textStyle="bold" />
 
@@ -614,7 +614,7 @@
                     android:layout_centerHorizontal="true"
                     android:drawableEnd="@drawable/dropdown"
                     android:onClick="expand"
-                    android:text="Завтра"
+                    android:text="@string/Zavtra"
                     android:textSize="23dp"
                     android:textStyle="bold" />
 
@@ -879,7 +879,7 @@
                     android:layout_centerHorizontal="true"
                     android:drawableEnd="@drawable/dropdown"
                     android:onClick="expand"
-                    android:text="Завтра"
+                    android:text="@string/Zavtra"
                     android:textSize="23dp"
                     android:textStyle="bold" />
 
@@ -1144,7 +1144,7 @@
                     android:layout_centerHorizontal="true"
                     android:drawableEnd="@drawable/dropdown"
                     android:onClick="expand"
-                    android:text="Завтра"
+                    android:text="@string/Zavtra"
                     android:textSize="23dp"
                     android:textStyle="bold" />
 
