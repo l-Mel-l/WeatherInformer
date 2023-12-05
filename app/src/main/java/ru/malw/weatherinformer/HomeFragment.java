@@ -70,9 +70,11 @@ public class HomeFragment extends Fragment {
                 getActivity().runOnUiThread(() -> {
                     try {
                         String units = Data.UseFahrenheit ? "F" : "C";
+                        int pressure = (int) Math.round(weather.getJSONArray("list").getJSONObject(0).getJSONObject("main").getDouble("pressure"));
+                        int NewPressure = (int) (pressure * 0.75006375541921);
                         ((TextView) root.findViewById(R.id.temperature)).setText(Math.round(Double.parseDouble(weather.getJSONArray("list").getJSONObject(0).getJSONObject("main").getString("temp"))) + "°" + units);
                         String description = weather.getJSONArray("list").getJSONObject(0).getJSONArray("weather").getJSONObject(0).getString("description");
-                        ((TextView) root.findViewById(R.id.WeatherText)).setText(description.substring(0, 1).toUpperCase() + description.substring(1) + getResources().getString(R.string.feelslike) + Math.round(Double.parseDouble(weather.getJSONArray("list").getJSONObject(0).getJSONObject("main").getString("feels_like"))) + "°" + units);
+                        ((TextView) root.findViewById(R.id.WeatherText)).setText(description.substring(0, 1).toUpperCase() + description.substring(1) + getResources().getString(R.string.feelslike) + Math.round(Double.parseDouble(weather.getJSONArray("list").getJSONObject(0).getJSONObject("main").getString("feels_like"))) + "°" + units + ", атмосферное давление " + NewPressure + " мм рт. ст.");
                         int icon = getResources().getIdentifier("big" + weather.getJSONArray("list").getJSONObject(0).getJSONArray("weather").getJSONObject(0).getString("icon").substring(0, 2), "drawable", requireActivity().getPackageName());
                         if (!Data.CityFriendlyName.equals(weather.getJSONObject("city").getString("name"))) {
                             Data.CityFriendlyName = weather.getJSONObject("city").getString("name");
@@ -92,7 +94,7 @@ public class HomeFragment extends Fragment {
                                 String currentDescription = ((TextView) root.findViewById(R.id.WeatherText)).getText().toString();
                                 System.out.println(currentDescription);
                                 Data.description = currentDescription;
-                                if (currentDescription.contains("Пасмурно") || description.contains("Облачно с прояснениями")) {
+                                if (currentDescription.contains("Пасмурно") || currentDescription.contains("Облачно с прояснениями")) {
 
                                     root.setBackgroundResource(R.drawable.cloud_back);
                                 } else if (currentDescription.contains("Небольшой снег")) {
