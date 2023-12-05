@@ -8,6 +8,7 @@ public class Data {
     public static int CityID;
     public static String CityFriendlyName;
     public static String language;
+    public static boolean tray;
 
     static void updateSettings(Context context) {
         SharedPreferences preferences = context.getSharedPreferences("settings", Context.MODE_PRIVATE);
@@ -15,6 +16,7 @@ public class Data {
         CityID = preferences.getInt("CityID", 0);
         CityFriendlyName = preferences.getString("CityFriendlyName", "Обновление информации...");
         language = preferences.getString("language", "ru");
+        tray = preferences.getBoolean("tray", false);
     }
 
     static void change(Context context, String name, int value) {
@@ -26,6 +28,12 @@ public class Data {
     static void change(Context context, String name, String value) {
         SharedPreferences.Editor editor = context.getSharedPreferences("settings", Context.MODE_PRIVATE).edit();
         editor.putString(name, value);
+        editor.apply();
+    }
+
+    static void change(Context context, String name, boolean value) {
+        SharedPreferences.Editor editor = context.getSharedPreferences("settings", Context.MODE_PRIVATE).edit();
+        editor.putBoolean(name, value);
         editor.apply();
     }
 

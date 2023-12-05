@@ -1,10 +1,8 @@
 package ru.malw.weatherinformer;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -38,5 +36,16 @@ public class DataBase {
         }
         return citiesList;
     }
+
+    public String getCityName(int id) {
+        String cityName = null;
+        try (Cursor cursor = db.rawQuery("SELECT FriendlyName FROM Cities WHERE id = ?", new String[]{String.valueOf(id)})) {
+            if (cursor.moveToFirst()) {
+                cityName = cursor.getString(cursor.getColumnIndex("FriendlyName"));
+            }
+        }
+        return cityName;
+    }
+
 
 }

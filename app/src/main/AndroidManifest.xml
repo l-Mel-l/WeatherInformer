@@ -31,7 +31,6 @@
             android:name=".MainActivity"
             android:exported="true">
         </activity>
-        <receiver android:name=".WeatherNotificationReceiver" />
     </application>
 
 </manifest>

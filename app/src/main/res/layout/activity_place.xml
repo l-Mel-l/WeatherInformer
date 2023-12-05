@@ -1,8 +1,9 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_marginTop="20dp">
+    android:paddingTop="20dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -10,10 +11,10 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:background="@color/white"
             android:id="@+id/backButton"
-            android:layout_width="wrap_content"
-            android:layout_height="45dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/back_arrow" />
 
         <EditText
@@ -21,29 +22,34 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="Введите название города" />
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:hint="Введите название города"
+            android:inputType="text"
+            android:maxLines="1"
+            android:imeOptions="actionSearch"/>
 
-        <Button
-            android:background="@color/white"
+        <ImageButton
             android:id="@+id/searchButton"
-            android:layout_width="88dp"
-            android:layout_height="wrap_content"
-            android:text="Поиск" />
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/search"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerInside"
+            android:textAllCaps="false"/>
 
         <ImageButton
             android:id="@+id/locationButton"
-            android:layout_width="40dp"
+            android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@color/white"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/position_icon" />
-
-
     </LinearLayout>
 
     <ListView
         android:id="@+id/cityListView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
-
+        android:layout_weight="1"
+        android:background="?android:attr/windowBackground"/>
 </LinearLayout>

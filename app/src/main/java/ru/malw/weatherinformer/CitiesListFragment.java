@@ -7,16 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.TextView;
 import org.json.JSONException;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.fragment.app.Fragment;
 
 import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.List;
 public class CitiesListFragment extends Fragment {
     private ActivityResultLauncher<Intent> activityLauncher;
     CityAdapter adapter;
@@ -26,6 +22,7 @@ public class CitiesListFragment extends Fragment {
         adapter = new CityAdapter(getContext(), R.layout.cities_list, MainActivity.db.retrieveCities(), (v) -> {
             Data.CityID = Integer.parseInt(v.getTag().toString());
             Data.change(getContext(), "CityID", Integer.parseInt(v.getTag().toString()));
+            ((MainActivity) getActivity()).toMainTab();
         });
         activityLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
