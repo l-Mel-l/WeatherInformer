@@ -92,7 +92,6 @@ public class HomeFragment extends Fragment {
                                 TooltipCompat.setTooltipText(i, description.substring(0, 1).toUpperCase() + description.substring(1));
                                 i.setContentDescription(description);
                                 String currentDescription = ((TextView) root.findViewById(R.id.WeatherText)).getText().toString();
-                                System.out.println(currentDescription);
                                 Data.description = currentDescription;
                                 if (currentDescription.contains("Пасмурно") || currentDescription.contains("Облачно с прояснениями")) {
 
