@@ -74,7 +74,6 @@ public class HomeFragment extends Fragment {
                         String description = weather.getJSONArray("list").getJSONObject(0).getJSONArray("weather").getJSONObject(0).getString("description");
                         ((TextView) root.findViewById(R.id.WeatherText)).setText(description.substring(0, 1).toUpperCase() + description.substring(1) + ", ощущается как " + Math.round(Double.parseDouble(weather.getJSONArray("list").getJSONObject(0).getJSONObject("main").getString("feels_like"))) + "°" + units);
                         int icon = getResources().getIdentifier("big" + weather.getJSONArray("list").getJSONObject(0).getJSONArray("weather").getJSONObject(0).getString("icon").substring(0, 2), "drawable", requireActivity().getPackageName());
-                        ((ImageView) root.findViewById(R.id.mainIcon)).setImageResource(icon);
                         if (!Data.CityFriendlyName.equals(weather.getJSONObject("city").getString("name"))) {
                             Data.CityFriendlyName = weather.getJSONObject("city").getString("name");
                             MainActivity.db.execAndLeave("UPDATE cities SET FriendlyName = \"" + Data.CityFriendlyName + "\" WHERE id = " + Data.CityID);
@@ -90,6 +89,18 @@ public class HomeFragment extends Fragment {
                                 description = weather.getJSONArray("list").getJSONObject(e).getJSONArray("weather").getJSONObject(0).getString("description");
                                 TooltipCompat.setTooltipText(i, description.substring(0, 1).toUpperCase() + description.substring(1));
                                 i.setContentDescription(description);
+                                String currentDescription = ((TextView) root.findViewById(R.id.WeatherText)).getText().toString();
+                                System.out.println(currentDescription);
+                                if (currentDescription.contains("Пасмурно") || description.contains("Облачно с прояснениями")) {
+
+                                    root.setBackgroundResource(R.drawable.cloud_back);
+                                } else if (currentDescription.contains("Небольшой снег")) {
+                                    root.setBackgroundResource(R.drawable.snow_back);
+                                } else if (currentDescription.contains("Небольшой дождь")) {
+                                    root.setBackgroundResource(R.drawable.rain_back);
+                                } else {
+                                    root.setBackgroundResource(R.drawable.sun_back);
+                                }
                             } catch (JSONException ex) {
                                 t.setText("???");
                                 i.setImageResource(R.drawable.unknown);

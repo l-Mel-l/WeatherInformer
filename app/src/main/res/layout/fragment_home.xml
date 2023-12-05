@@ -22,6 +22,7 @@
 
             <TextView
                 android:id="@+id/city"
+                android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -38,20 +39,17 @@
                 android:layout_marginTop="30dp"
                 android:gravity="center_vertical"
                 android:layout_marginBottom="20dp">
-                <ImageView
-                    android:id="@+id/mainIcon"
-                    android:layout_width="80dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_height="80dp"/>
                 <TextView
                     android:id="@+id/temperature"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/white"
                     android:text="..."
                     android:textSize="80sp" />
             </LinearLayout>
             <TextView
                 android:id="@+id/WeatherText"
+                android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/temperatureLayout"
@@ -80,6 +78,7 @@
                 <TextView
                     android:id="@+id/d0"
                     android:layout_width="wrap_content"
+                    android:textColor="@color/white"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:drawableEnd="@drawable/dropdown"
@@ -105,6 +104,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="0:00" />
@@ -118,6 +118,7 @@
 
                         <TextView
                             android:id="@+id/t0"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -132,6 +133,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="3:00" />
@@ -145,6 +147,7 @@
 
                         <TextView
                             android:id="@+id/t1"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -159,6 +162,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="6:00" />
@@ -172,6 +176,7 @@
 
                         <TextView
                             android:id="@+id/t2"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -186,6 +191,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="9:00" />
@@ -199,6 +205,7 @@
 
                         <TextView
                             android:id="@+id/t3"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -213,6 +220,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="12:00" />
@@ -226,6 +234,7 @@
 
                         <TextView
                             android:id="@+id/t4"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -240,6 +249,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="15:00" />
@@ -253,6 +263,7 @@
 
                         <TextView
                             android:id="@+id/t5"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -267,6 +278,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="18:00" />
@@ -280,6 +292,7 @@
 
                         <TextView
                             android:id="@+id/t6"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -294,6 +307,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="21:00" />
@@ -307,6 +321,7 @@
 
                         <TextView
                             android:id="@+id/t7"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -327,6 +342,7 @@
 
                 <TextView
                     android:id="@+id/d8"
+                    android:textColor="@color/white"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
@@ -353,6 +369,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="0:00" />
@@ -366,6 +383,7 @@
 
                         <TextView
                             android:id="@+id/t8"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -380,6 +398,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="3:00" />
@@ -393,6 +412,7 @@
 
                         <TextView
                             android:id="@+id/t9"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -407,6 +427,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="6:00" />
@@ -420,6 +441,7 @@
 
                         <TextView
                             android:id="@+id/t10"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -434,6 +456,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="9:00" />
@@ -447,6 +470,7 @@
 
                         <TextView
                             android:id="@+id/t11"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -461,6 +485,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="12:00" />
@@ -474,6 +499,7 @@
 
                         <TextView
                             android:id="@+id/t12"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -488,6 +514,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="15:00" />
@@ -501,6 +528,7 @@
 
                         <TextView
                             android:id="@+id/t13"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -515,6 +543,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="18:00" />
@@ -528,6 +557,7 @@
 
                         <TextView
                             android:id="@+id/t14"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -542,6 +572,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="21:00" />
@@ -555,6 +586,7 @@
 
                         <TextView
                             android:id="@+id/t15"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -575,6 +607,7 @@
 
                 <TextView
                     android:id="@+id/d16"
+                    android:textColor="@color/white"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
@@ -601,6 +634,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="0:00" />
@@ -614,6 +648,7 @@
 
                         <TextView
                             android:id="@+id/t16"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -628,6 +663,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="3:00" />
@@ -641,6 +677,7 @@
 
                         <TextView
                             android:id="@+id/t17"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -655,6 +692,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="6:00" />
@@ -668,6 +706,7 @@
 
                         <TextView
                             android:id="@+id/t18"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -682,6 +721,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="9:00" />
@@ -695,6 +735,7 @@
 
                         <TextView
                             android:id="@+id/t19"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -709,6 +750,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="12:00" />
@@ -722,6 +764,7 @@
 
                         <TextView
                             android:id="@+id/t20"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -736,6 +779,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="15:00" />
@@ -749,6 +793,7 @@
 
                         <TextView
                             android:id="@+id/t21"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -763,6 +808,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="18:00" />
@@ -776,6 +822,7 @@
 
                         <TextView
                             android:id="@+id/t22"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -790,6 +837,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="21:00" />
@@ -803,6 +851,7 @@
 
                         <TextView
                             android:id="@+id/t23"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -823,6 +872,7 @@
 
                 <TextView
                     android:id="@+id/d24"
+                    android:textColor="@color/white"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
@@ -849,6 +899,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="0:00" />
@@ -862,6 +913,7 @@
 
                         <TextView
                             android:id="@+id/t24"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -876,6 +928,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="3:00" />
@@ -889,6 +942,7 @@
 
                         <TextView
                             android:id="@+id/t25"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -903,6 +957,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="6:00" />
@@ -916,6 +971,7 @@
 
                         <TextView
                             android:id="@+id/t26"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -930,6 +986,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="9:00" />
@@ -943,6 +1000,7 @@
 
                         <TextView
                             android:id="@+id/t27"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -957,6 +1015,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="12:00" />
@@ -970,6 +1029,7 @@
 
                         <TextView
                             android:id="@+id/t28"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -984,6 +1044,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="15:00" />
@@ -997,6 +1058,8 @@
 
                         <TextView
                             android:id="@+id/t29"
+                            android:textColor="@color/white"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
