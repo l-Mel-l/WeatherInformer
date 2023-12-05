@@ -5,4 +5,21 @@
     <string name="settings">Настройки</string>
     <string name="temperature_label">Измерять температуру в градусах:</string>
     <string name="language_label">Язык:</string>
+    <string name="incity">В городе %city% %value%</string>
+    <string name="ExcSendZnach">Ошибка отправки запроса!</string>
+    <string name="ExcInternet">\"Попробуйте сменить IP адрес (перезагрузить роутер или использовать VPN)</string>
+    <string name="Yes">Да</string>
+    <string name="No">Нет</string>
+    <string name="Unknown">Неизвестно</string>
+    <string name="citiesSearch">Поиск городов</string>
+    <string name="NormalZaprocpz">Введите нормальный запрос!</string>
+    <string name="NoFound">Ничего не найдено!</string>
+    <string name="UpdateInfo">Обновление информации...</string>
+    <string name="EnterNameCity">Введите название города</string>
+    <string name="Zavtra">Завтра</string>
+    <string name="Celsius">Цельсия</string>
+    <string name="Farr">Фаренгейта</string>
+    <string name="Enable_notifications">Включить уведомления</string>
+    <string name="Close">Закрыть</string>
+    <string name="feelslike">, ощущается как</string>
 </resources>

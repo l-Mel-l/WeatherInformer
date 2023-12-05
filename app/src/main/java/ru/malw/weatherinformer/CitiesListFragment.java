@@ -1,5 +1,7 @@
 package ru.malw.weatherinformer;
 
+import static ru.malw.weatherinformer.Data.description;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,11 +9,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import org.json.JSONException;
+
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.fragment.app.Fragment;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 public class CitiesListFragment extends Fragment {
     private ActivityResultLauncher<Intent> activityLauncher;
@@ -49,6 +52,17 @@ public class CitiesListFragment extends Fragment {
         view.findViewById(R.id.locationEditText).setOnClickListener(v -> {
             activityLauncher.launch(new Intent(getActivity(), AddCity.class));
         });
+        String currentDescription = description;
+        if (currentDescription.contains("Пасмурно") || currentDescription.contains("Облачно с прояснениями")) {
+
+            view.setBackgroundResource(R.drawable.cloud_back);
+        } else if (currentDescription.contains("Небольшой снег")) {
+            view.setBackgroundResource(R.drawable.snow_back);
+        } else if (currentDescription.contains("Небольшой дождь")) {
+            view.setBackgroundResource(R.drawable.rain_back);
+        } else {
+            view.setBackgroundResource(R.drawable.sun_back);
+        }
 
         return view;
     }

@@ -84,12 +84,12 @@ public class AddCity extends AppCompatActivity {
             } catch (IOException | JSONException e) {
                 new Handler(Looper.getMainLooper()).post(() ->
                     new AlertDialog.Builder(this)
-                        .setTitle("Ошибка отправки запроса!")
-                        .setMessage("Попробуйте сменить IP адрес (перезагрузить роутер или использовать VPN). Показать рекомендуемый VPN-сервис?")
-                        .setPositiveButton("Да", (dialog, which) -> {
+                        .setTitle(getResources().getString(R.string.ExcSendZnach))
+                        .setMessage(getResources().getString(R.string.ExcInternet))
+                        .setPositiveButton(getResources().getString(R.string.Yes), (dialog, which) -> {
                             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://zelenka.guru/threads/4807721")));
                             dialog.dismiss();})
-                        .setNegativeButton("Нет", null)
+                        .setNegativeButton(getResources().getString(R.string.No), null)
                         .show()
                 );
             }
@@ -102,7 +102,7 @@ public class AddCity extends AppCompatActivity {
             new AlertDialog.Builder(this)
                 .setTitle(title)
                 .setMessage(text)
-                .setPositiveButton("Закрыть", null)
+                .setPositiveButton(getResources().getString(R.string.Close), null)
                 .show()
         );
     }

@@ -8,14 +8,17 @@
 
     <TextView
         android:id="@+id/textViewTitle"
+        android:textColor="@color/white"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Измерять температуру в градусах..."
-        android:textSize="18sp"
+        android:text="@string/temperature_label"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:fontFamily="serif"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroupTemperature"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <RadioGroup
         android:id="@+id/radioGroupTemperature"
@@ -27,26 +30,34 @@
 
         <RadioButton
             android:id="@+id/radioButtonCelsius"
+            android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Цельсия"/>
+            android:fontFamily="serif"
+            android:textSize="16sp"
+            android:text="@string/Celsius"/>
 
         <RadioButton
             android:id="@+id/radioButtonFahrenheit"
+            android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Фаренгейта"/>
+            android:fontFamily="serif"
+            android:textSize="16sp"
+            android:text="@string/Farr"/>
     </RadioGroup>
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/switchNotifications"
+        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroupTemperature"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"
-        android:text="Включить уведомления"/>
+        android:fontFamily="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupTemperature"
+        android:text="@string/Enable_notifications"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/save"

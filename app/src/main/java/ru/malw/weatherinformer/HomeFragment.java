@@ -70,11 +70,12 @@ public class HomeFragment extends Fragment {
                 getActivity().runOnUiThread(() -> {
                     try {
                         String units = Data.UseFahrenheit ? "F" : "C";
+                        int pressure = (int) Math.round(weather.getJSONArray("list").getJSONObject(0).getJSONObject("main").getDouble("pressure"));
+                        int NewPressure = (int) (pressure * 0.75006375541921);
                         ((TextView) root.findViewById(R.id.temperature)).setText(Math.round(Double.parseDouble(weather.getJSONArray("list").getJSONObject(0).getJSONObject("main").getString("temp"))) + "°" + units);
                         String description = weather.getJSONArray("list").getJSONObject(0).getJSONArray("weather").getJSONObject(0).getString("description");
-                        ((TextView) root.findViewById(R.id.WeatherText)).setText(description.substring(0, 1).toUpperCase() + description.substring(1) + ", ощущается как " + Math.round(Double.parseDouble(weather.getJSONArray("list").getJSONObject(0).getJSONObject("main").getString("feels_like"))) + "°" + units);
+                        ((TextView) root.findViewById(R.id.WeatherText)).setText(description.substring(0, 1).toUpperCase() + description.substring(1) + getResources().getString(R.string.feelslike) + Math.round(Double.parseDouble(weather.getJSONArray("list").getJSONObject(0).getJSONObject("main").getString("feels_like"))) + "°" + units + ", атмосферное давление " + NewPressure + " мм рт. ст.");
                         int icon = getResources().getIdentifier("big" + weather.getJSONArray("list").getJSONObject(0).getJSONArray("weather").getJSONObject(0).getString("icon").substring(0, 2), "drawable", requireActivity().getPackageName());
-                        ((ImageView) root.findViewById(R.id.mainIcon)).setImageResource(icon);
                         if (!Data.CityFriendlyName.equals(weather.getJSONObject("city").getString("name"))) {
                             Data.CityFriendlyName = weather.getJSONObject("city").getString("name");
                             MainActivity.db.execAndLeave("UPDATE cities SET FriendlyName = \"" + Data.CityFriendlyName + "\" WHERE id = " + Data.CityID);
@@ -90,21 +91,34 @@ public class HomeFragment extends Fragment {
                                 description = weather.getJSONArray("list").getJSONObject(e).getJSONArray("weather").getJSONObject(0).getString("description");
                                 TooltipCompat.setTooltipText(i, description.substring(0, 1).toUpperCase() + description.substring(1));
                                 i.setContentDescription(description);
+                                String currentDescription = ((TextView) root.findViewById(R.id.WeatherText)).getText().toString();
+                                System.out.println(currentDescription);
+                                Data.description = currentDescription;
+                                if (currentDescription.contains("Пасмурно") || currentDescription.contains("Облачно с прояснениями")) {
+
+                                    root.setBackgroundResource(R.drawable.cloud_back);
+                                } else if (currentDescription.contains("Небольшой снег")) {
+                                    root.setBackgroundResource(R.drawable.snow_back);
+                                } else if (currentDescription.contains("Небольшой дождь")) {
+                                    root.setBackgroundResource(R.drawable.rain_back);
+                                } else {
+                                    root.setBackgroundResource(R.drawable.sun_back);
+                                }
                             } catch (JSONException ex) {
                                 t.setText("???");
                                 i.setImageResource(R.drawable.unknown);
-                                TooltipCompat.setTooltipText(i, "Неизвестно");
-                                i.setContentDescription("Неизвестно");
+                                TooltipCompat.setTooltipText(i, getResources().getString(R.string.Unknown));
+                                i.setContentDescription(getResources().getString(R.string.Unknown));
                             }
                         }
                         for (int i = 0; i < 4; i++) {
                             int index = new int[]{8, 16, 24, 32}[i];
-                            String date = new SimpleDateFormat("EEEE, d MMMM", Locale.forLanguageTag("ru"))
+                            String date = new SimpleDateFormat("EEEE, d MMMM", Locale.forLanguageTag(Data.language))
                                     .format(new Date(Long.parseLong(weather.getJSONArray("list").getJSONObject(index).getString("dt")) * 1000));
                             ((TextView) root.findViewById(getResources().getIdentifier("d" + index, "id", requireActivity().getPackageName()))).setText(date.substring(0, 1).toUpperCase() + date.substring(1) + " (" + Integer.parseInt(((TextView) root.findViewById(getResources().getIdentifier("t" + index, "id", requireActivity().getPackageName()))).getText().toString().replace("°", "")) + "°" + units + ")");
                         }
                         if (Data.tray) {
-                            prepareNotification(context, "В городе " + Data.CityFriendlyName + " " + ((TextView) root.findViewById(R.id.temperature)).getText(), ((TextView) root.findViewById(R.id.WeatherText)).getText().toString(), icon);
+                            prepareNotification(context, getResources().getString(R.string.incity).replace("%city%", Data.CityFriendlyName).replace("%value%", ((TextView) root.findViewById(R.id.temperature)).getText()), ((TextView) root.findViewById(R.id.WeatherText)).getText().toString(), icon);
                         }
                     } catch (JSONException e) {
                         throw new RuntimeException(e);
