@@ -113,9 +113,11 @@ public class AddCity extends AppCompatActivity {
                 HttpURLConnection connection = (HttpURLConnection) new URL("https://ipinfo.io/json").openConnection();
                 connection.setRequestMethod("GET");
                 JSONObject response = new JSONObject(new Scanner(connection.getInputStream(), "UTF-8").useDelimiter("\\A").next());
-                EditText editText = findViewById(R.id.cityEditText);
-                editText.setText(response.optString("city", "")+", "+response.optString("country", ""));
-                search(editText.getText().toString(), findViewById(R.id.cityListView));
+                runOnUiThread(() -> {
+                    EditText editText = findViewById(R.id.cityEditText);
+                    editText.setText(response.optString("city", "")+", "+response.optString("country", ""));
+                    search(editText.getText().toString(), findViewById(R.id.cityListView));
+                });
             } catch (IOException | JSONException e) {
                 Log.e("IOException", e.getMessage());
                 new Handler(Looper.getMainLooper()).post(() ->
