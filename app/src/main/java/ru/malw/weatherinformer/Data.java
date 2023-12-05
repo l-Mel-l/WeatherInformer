@@ -26,11 +26,6 @@ public class Data {
         editor.apply();
     }
 
-    static void change(Context context, String name, String value) {
-        SharedPreferences.Editor editor = context.getSharedPreferences("settings", Context.MODE_PRIVATE).edit();
-        editor.putString(name, value);
-        editor.apply();
-    }
 
     static void change(Context context, String name, boolean value) {
         SharedPreferences.Editor editor = context.getSharedPreferences("settings", Context.MODE_PRIVATE).edit();

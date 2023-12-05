@@ -3,6 +3,7 @@ package ru.malw.weatherinformer;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.database.sqlite.SQLiteConstraintException;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -73,9 +74,15 @@ public class AddCity extends AppCompatActivity {
                                     }
                                 })
                             .collect(Collectors.toList()), (view) -> {
-                            MainActivity.db.execAndLeave("INSERT INTO Cities VALUES (" + view.getTag() + ", \"" + ((TextView) view.findViewById(R.id.name)).getText() + "\")");
-                            setResult(Activity.RESULT_OK, new Intent().putExtra("id", Integer.parseInt(view.getTag().toString())).putExtra("name", ((TextView) view.findViewById(R.id.name)).getText()));
-                            finish();
+                            try {
+                                MainActivity.db.execAndLeave("INSERT INTO Cities VALUES (" + view.getTag() + ", \"" + ((TextView) view.findViewById(R.id.name)).getText() + "\")");
+                                setResult(Activity.RESULT_OK, new Intent().putExtra("id", Integer.parseInt(view.getTag().toString())).putExtra("name", ((TextView) view.findViewById(R.id.name)).getText()));
+                                finish();
+                            }
+                            catch (SQLiteConstraintException e) {
+                                setResult(Activity.RESULT_CANCELED);
+                                finish();
+                            }
                         }));
                     });
 
