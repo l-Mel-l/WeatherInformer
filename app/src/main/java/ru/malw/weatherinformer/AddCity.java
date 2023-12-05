@@ -7,7 +7,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +17,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -102,5 +105,31 @@ public class AddCity extends AppCompatActivity {
                 .setPositiveButton(getResources().getString(R.string.Close), null)
                 .show()
         );
+    }
+
+    public void autoLocation(View view) {
+        CompletableFuture.runAsync(() -> {
+            try {
+                HttpURLConnection connection = (HttpURLConnection) new URL("https://ipinfo.io/json").openConnection();
+                connection.setRequestMethod("GET");
+                JSONObject response = new JSONObject(new Scanner(connection.getInputStream(), "UTF-8").useDelimiter("\\A").next());
+                EditText editText = findViewById(R.id.cityEditText);
+                editText.setText(response.optString("city", "")+", "+response.optString("country", ""));
+                search(editText.getText().toString(), findViewById(R.id.cityListView));
+            } catch (IOException | JSONException e) {
+                Log.e("IOException", e.getMessage());
+                new Handler(Looper.getMainLooper()).post(() ->
+                    new AlertDialog.Builder(this)
+                        .setTitle("Ошибка отправки запроса!")
+                        .setMessage("Попробуйте сменить IP адрес (перезагрузить роутер или использовать VPN). Показать рекомендуемый VPN-сервис?")
+                        .setPositiveButton("Да", (dialog, which) -> {
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://zelenka.guru/threads/4807721")));
+                            dialog.dismiss();
+                        })
+                        .setNegativeButton("Нет", null)
+                        .show()
+                );
+            }
+        }).join();
     }
 }

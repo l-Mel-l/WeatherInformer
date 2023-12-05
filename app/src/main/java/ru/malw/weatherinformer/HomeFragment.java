@@ -132,15 +132,15 @@ public class HomeFragment extends Fragment {
             @Override
             public void onError() {
                 new Handler(Looper.getMainLooper()).post(() ->
-                        new AlertDialog.Builder(context)
-                                .setTitle(getResources().getString(R.string.ExcSendZnach))
-                                .setMessage(getResources().getString(R.string.ExcInternet))
-                                .setPositiveButton(getResources().getString(R.string.Yes), (dialog, which) -> {
-                                    context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://zelenka.guru/threads/4807721")));
-                                    dialog.dismiss();
-                                })
-                                .setNegativeButton(getResources().getString(R.string.No), null)
-                                .show()
+                    new AlertDialog.Builder(context)
+                        .setTitle("Ошибка отправки запроса!")
+                        .setMessage("Попробуйте сменить IP адрес (перезагрузить роутер или использовать VPN). Показать рекомендуемый VPN-сервис?")
+                        .setPositiveButton("Да", (dialog, which) -> {
+                            context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://zelenka.guru/threads/4807721")));
+                            dialog.dismiss();
+                        })
+                        .setNegativeButton("Нет", null)
+                        .show()
                 );
             }
         });
