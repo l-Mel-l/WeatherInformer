@@ -22,12 +22,13 @@
 
             <TextView
                 android:id="@+id/city"
-                android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="5dp"
+                android:fontFamily="serif"
                 android:text="Обновление информации"
+                android:textColor="@color/white"
                 android:textSize="40sp" />
 
             <LinearLayout
@@ -39,12 +40,14 @@
                 android:layout_marginTop="30dp"
                 android:gravity="center_vertical"
                 android:layout_marginBottom="20dp">
+
                 <TextView
                     android:id="@+id/temperature"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
+                    android:fontFamily="serif"
                     android:text="..."
+                    android:textColor="@color/white"
                     android:textSize="80sp" />
             </LinearLayout>
             <TextView
@@ -1058,8 +1061,6 @@
 
                         <TextView
                             android:id="@+id/t29"
-                            android:textColor="@color/white"
-                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
