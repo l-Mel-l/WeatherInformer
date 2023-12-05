@@ -22,4 +22,6 @@
     <string name="Enable_notifications">Включить уведомления</string>
     <string name="Close">Закрыть</string>
     <string name="feelslike">, ощущается как</string>
+    <string name="AtmDavl">, атмосферное давление</string>
+    <string name="mm">мм рт. ст.</string>
 </resources>

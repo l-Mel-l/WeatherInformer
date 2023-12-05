@@ -23,4 +23,6 @@
     <string name="Enable_notifications">Enable notifications</string>
     <string name="Close">Close</string>
     <string name="feelslike">, feels like</string>
+    <string name="AtmDavl">, Atmosphere pressure</string>
+    <string name="mm">mm of mercury</string>
 </resources>
