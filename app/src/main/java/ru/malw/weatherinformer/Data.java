@@ -9,6 +9,7 @@ public class Data {
     public static String CityFriendlyName;
     public static String language;
     public static boolean tray;
+    public static String description;
 
     static void updateSettings(Context context) {
         SharedPreferences preferences = context.getSharedPreferences("settings", Context.MODE_PRIVATE);

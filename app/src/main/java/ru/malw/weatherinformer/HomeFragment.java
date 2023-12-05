@@ -91,6 +91,7 @@ public class HomeFragment extends Fragment {
                                 i.setContentDescription(description);
                                 String currentDescription = ((TextView) root.findViewById(R.id.WeatherText)).getText().toString();
                                 System.out.println(currentDescription);
+                                Data.description = currentDescription;
                                 if (currentDescription.contains("Пасмурно") || description.contains("Облачно с прояснениями")) {
 
                                     root.setBackgroundResource(R.drawable.cloud_back);

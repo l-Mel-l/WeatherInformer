@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context="ru.malw.weatherinformer.HomeFragment">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -45,7 +46,8 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
                     android:text="..."
-                    android:textSize="80sp" />
+                    android:textSize="80sp"
+                    android:gravity="center"/>
             </LinearLayout>
             <TextView
                 android:id="@+id/WeatherText"
@@ -65,7 +67,6 @@
         android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@+id/swipeRefreshLayout"
         app:layout_constraintBottom_toBottomOf="parent">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -1059,6 +1060,34 @@
                         <TextView
                             android:id="@+id/t29"
                             android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="1°" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/white"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="18:00" />
+
+                        <ImageView
+                            android:id="@+id/i30"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/i01" />
+
+                        <TextView
+                            android:id="@+id/t30"
                             android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -1074,33 +1103,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="18:00" />
-
-                        <ImageView
-                            android:id="@+id/i30"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/i01" />
-
-                        <TextView
-                            android:id="@+id/t30"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="1°" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_columnWeight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="21:00" />
@@ -1114,6 +1117,7 @@
 
                         <TextView
                             android:id="@+id/t31"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -1134,6 +1138,7 @@
 
                 <TextView
                     android:id="@+id/d32"
+                    android:textColor="@color/white"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
@@ -1159,6 +1164,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -1172,6 +1178,7 @@
                             android:src="@drawable/i01" />
 
                         <TextView
+                            android:textColor="@color/white"
                             android:id="@+id/t32"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -1187,6 +1194,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="3:00" />
@@ -1200,6 +1208,7 @@
 
                         <TextView
                             android:id="@+id/t33"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -1214,6 +1223,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="6:00" />
@@ -1227,6 +1237,7 @@
 
                         <TextView
                             android:id="@+id/t34"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -1241,6 +1252,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="9:00" />
@@ -1254,6 +1266,7 @@
 
                         <TextView
                             android:id="@+id/t35"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -1268,6 +1281,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="12:00" />
@@ -1281,6 +1295,7 @@
 
                         <TextView
                             android:id="@+id/t36"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -1295,6 +1310,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="15:00" />
@@ -1308,6 +1324,7 @@
 
                         <TextView
                             android:id="@+id/t37"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -1322,6 +1339,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="18:00" />
@@ -1335,6 +1353,7 @@
 
                         <TextView
                             android:id="@+id/t38"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -1349,6 +1368,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/white"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="21:00" />
@@ -1362,6 +1382,7 @@
 
                         <TextView
                             android:id="@+id/t39"
+                            android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
