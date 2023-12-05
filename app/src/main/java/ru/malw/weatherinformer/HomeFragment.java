@@ -74,7 +74,7 @@ public class HomeFragment extends Fragment {
                         int NewPressure = (int) (pressure * 0.75006375541921);
                         ((TextView) root.findViewById(R.id.temperature)).setText(Math.round(Double.parseDouble(weather.getJSONArray("list").getJSONObject(0).getJSONObject("main").getString("temp"))) + "°" + units);
                         String description = weather.getJSONArray("list").getJSONObject(0).getJSONArray("weather").getJSONObject(0).getString("description");
-                        ((TextView) root.findViewById(R.id.WeatherText)).setText(description.substring(0, 1).toUpperCase() + description.substring(1) + getResources().getString(R.string.feelslike) + Math.round(Double.parseDouble(weather.getJSONArray("list").getJSONObject(0).getJSONObject("main").getString("feels_like"))) + "°" + units + getResources().getString(R.string.AtmDavl) + NewPressure + getResources().getString(R.string.mm));
+                        ((TextView) root.findViewById(R.id.WeatherText)).setText(description.substring(0, 1).toUpperCase() + description.substring(1) + getResources().getString(R.string.feelslike) +" "+ Math.round(Double.parseDouble(weather.getJSONArray("list").getJSONObject(0).getJSONObject("main").getString("feels_like"))) + "°" + units + getResources().getString(R.string.AtmDavl) + NewPressure + getResources().getString(R.string.mm));
                         int icon = getResources().getIdentifier("big" + weather.getJSONArray("list").getJSONObject(0).getJSONArray("weather").getJSONObject(0).getString("icon").substring(0, 2), "drawable", requireActivity().getPackageName());
                         if (!Data.CityFriendlyName.equals(weather.getJSONObject("city").getString("name"))) {
                             Data.CityFriendlyName = weather.getJSONObject("city").getString("name");
@@ -111,8 +111,8 @@ public class HomeFragment extends Fragment {
                                 i.setContentDescription(getResources().getString(R.string.Unknown));
                             }
                         }
-                        for (int i = 0; i < 4; i++) {
-                            int index = new int[]{8, 16, 24, 32}[i];
+                        for (int i = 0; i < 5; i++) {
+                            int index = new int[]{0, 8, 16, 24, 32}[i];
                             String date = new SimpleDateFormat("EEEE, d MMMM", Locale.forLanguageTag(Data.language))
                                     .format(new Date(Long.parseLong(weather.getJSONArray("list").getJSONObject(index).getString("dt")) * 1000));
                             ((TextView) root.findViewById(getResources().getIdentifier("d" + index, "id", requireActivity().getPackageName()))).setText(date.substring(0, 1).toUpperCase() + date.substring(1) + " (" + Integer.parseInt(((TextView) root.findViewById(getResources().getIdentifier("t" + index, "id", requireActivity().getPackageName()))).getText().toString().replace("°", "")) + "°" + units + ")");

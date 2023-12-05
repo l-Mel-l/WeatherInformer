@@ -49,14 +49,16 @@
                     android:textSize="80sp"
                     android:gravity="center"/>
             </LinearLayout>
+
             <TextView
                 android:id="@+id/WeatherText"
-                android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/temperatureLayout"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
                 android:textSize="17sp" />
         </RelativeLayout>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
